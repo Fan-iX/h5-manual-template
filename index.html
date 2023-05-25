@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/slide.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/browser.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/editor.css">
+</head>
+
+<body>
+  <article class="win">
+    <select onchange='document.querySelector("article").className=this.value'>
+      <option value="win">Windows</option>
+      <option value="mac">MacOS</option>
+    </select>
+    <select onchange='document.body.className=this.value'>
+      <option value="dark">暗</option>
+      <option value="light">亮</option>
+    </select>
+
+    <div class="slide">
+      <div class="titlebar">
+        <div class="titlebar-title">
+          <div class="titlebar-icon"></div>
+          <div class="titlebar-text">
+            This is not actually not a pdf file but it has a long file name so that its
+            text may overflow the container.pdf - ebodA Clown (32-bit)
+          </div>
+        </div>
+        <div class="titlebar-extra"></div>
+        <div class="button btn-1"></div>
+        <div class="button btn-2"></div>
+        <div class="button btn-3"></div>
+      </div>
+      <div class="toolbar win">
+        <div class="file menu">文件(F)</div>
+        <div class="view menu">视图(V)</div>
+        <div class="setting menu">设置(S)</div>
+        <div class="about menu">关于(A)</div>
+      </div>
+      <div class="body" id="manual-container">
+        <section class="slide-page">
+          <h2>这是一段示例文字</h2>
+          <div class="s-prose js-post-body" itemprop="text">
+            <p>You could apply the <code>padding-bottom</code> to its <code>::before</code> pseudoelement,
+              e.g.</p>
+            <pre class="code">
+.some-class {
+  width: 100%;
+  max-width: 520px;
+  border: 1px #9bc solid;
+}
+.some-class::before {
+   padding-bottom: 100%;
+   content: "";
+   display: inline-block;
+   vertical-align: top;
+}</pre>
+          </div>
+        </section>
+        <section class="slide-page">
+          <h2>这是另一段示例文字</h2>
+        </section>
+      </div>
+    </div>
+    <div class="browser">
+      <div class="titlebar">
+        <div class="titlebar-title">
+          <div class="titlebar-icon"></div>
+          <div class="titlebar-text">Document</div>
+        </div>
+        <div class="titlebar-extra"></div>
+        <div class="button btn-1"></div>
+        <div class="button btn-2"></div>
+        <div class="button btn-3"></div>
+      </div>
+      <div class="toolbar">
+        <div class="backward button"></div>
+        <div class="foreward button"></div>
+        <div class="refresh button"></div>
+        <input class="address" value="http://localhost:8081" spellcheck="false">
+        <div class="setting button"></div>
+      </div>
+      <div class="body" id="manual-container">
+        <h1>Directory listing for /</h1>
+        <hr>
+        <ul>
+          <li><a href="javascript:;">.bash_history</a></li>
+          <li><a href="javascript:;">.bash_logout</a></li>
+          <li><a href="javascript:;">.bashrc</a></li>
+          <li><a href="javascript:;">.cache/</a></li>
+          <li><a href="javascript:;">.config/</a></li>
+          <li><a href="javascript:;">.ssh/</a></li>
+          <li><a href="javascript:;">downloads/</a></li>
+          <li><a href="javascript:;">share/</a></li>
+          <li><a href="javascript:;">software/</a></li>
+      </div>
+    </div>
+    <div class="terminal">
+      <div class="titlebar">
+        <div class="titlebar-title">
+          <div class="titlebar-icon"></div>
+          <div class="titlebar-text">coli@DESKTOP-J45M1NUM:~</div>
+        </div>
+        <div class="titlebar-extra"></div>
+        <div class="button btn-1"></div>
+        <div class="button btn-2"></div>
+        <div class="button btn-3"></div>
+      </div>
+      <div class="terminal-panel">
+        <pre class="terminal-code" oncontextmenu="event.preventDefault()">
+<details data-manual="ls"><summary>[<span class="terminal-code-bash-prompt">coli@DESKTOP-J45M1NUM</span> <span class="terminal-code-bash-path">~</span>]$ whoami</summary>coli</details><!--
+-->[<span class="terminal-code-bash-prompt">coli@DESKTOP-J45M1NUM</span> <span class="terminal-code-bash-path">~</span>]$ <span contentEditable="true" spellcheck="false">‎</span>
+</pre>
+      </div>
+    </div>
+    <div class="editor">
+      <div class="titlebar">
+        <div class="titlebar-title">
+          <div class="titlebar-icon"></div>
+          <div class="titlebar-text">Untitled.svg</div>
+        </div>
+        <div class="titlebar-extra"></div>
+        <div class="button btn-1"></div>
+        <div class="button btn-2"></div>
+        <div class="button btn-3"></div>
+      </div>
+      <div class="toolbar">
+        <div class="file menu">文件</div>
+        <div class="edit menu">编辑</div>
+        <div class="view menu">查看</div>
+      </div>
+      <div class="editor-body">
+        <pre class="editor-text" contentEditable="true" spellcheck="false">
+&lt;svg viewBox=&quot;0 0 420 420&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; &gt;
+    &lt;circle cx=&quot;210&quot; cy=&quot;210&quot; r=&quot;192.5&quot; fill=&quot;#fcb548&quot; /&gt;
+    &lt;path
+        d=&quot;M61.5 225.5c0 68.438 66.764 124 149 124 82.237 0 149-55.562 149-124-7.858 57.608-71.917 104.38-149 104.38-77.082 0-141.14-46.772-149-104.38z&quot;
+        fill=&quot;#76350d&quot; /&gt;
+    &lt;path
+        d=&quot;M32 113c7.078-5.946 58.756-30.871 136 1 12.684 5.233 10.781 24.937-12 18-21.625-6.585-66.255-7.195-80-3-65.324 19.936-50.61-10.447-44-16z&quot;
+        fill=&quot;#fff&quot; /&gt;
+    &lt;circle cx=&quot;48&quot; cy=&quot;121&quot; r=&quot;15&quot; fill=&quot;#733309&quot; /&gt;
+    &lt;path
+        d=&quot;M242 113c7.078-5.946 58.756-30.871 136 1 12.684 5.233 10.781 24.937-12 18-21.625-6.585-66.255-7.195-80-3-65.324 19.936-50.61-10.447-44-16z&quot;
+        fill=&quot;#fff&quot; /&gt;
+    &lt;circle cx=&quot;258&quot; cy=&quot;121&quot; r=&quot;15&quot; fill=&quot;#733309&quot; /&gt;
+&lt;/svg&gt;
+</pre>
+      </div>
+    </div>
+  </article>
+</body>
+
+</html>

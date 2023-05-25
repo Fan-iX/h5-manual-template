@@ -1,0 +1,249 @@
+@notepad-icon:'data:image/svg+xml;utf8,<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg"> <path d="M260 20a15 15 0 0 1 15 15v260a15 15 0 0 1 -15 15H60a15 15 0 0 1-15-15V35a15 15 0 0 1 15-15z" fill="url(%23a)"/><path d="M260 20a15 15 0 0 1 15 15v235a15 15 0 0 1 -15 15H60a15 15 0 0 1-15-15V35a15 15 0 0 1 15-15z" fill="url(%23b)"/><path d="M260 20a15 15 0 0 1 15 15v210a15 15 0 0 1 -15 15H60a15 15 0 0 1-15-15V35a15 15 0 0 1 15-15z" fill="url(%23c)"/><path d="M87 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-3a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z" fill="%23057093"/><path d="M137 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-4a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z" fill="%23057093"/><path d="M187 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-4a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z" fill="%23057093"/><path d="M237 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-4a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z" fill="%23057093"/><path d="M232 84a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-144a5 5 0 0 1-5-5v-10a5 5 0 0 1 5-5z" fill="%23057093"/><path d="M232 135a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-144a5 5 0 0 1-5-5v-10a5 5 0 0 1 5-5z" fill="%23057093"/><path d="M232 186a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-144a5 5 0 0 1-5-5v-10a5 5 0 0 1 5-5z" fill="%23057093"/><defs> <linearGradient id="a" x1="0" y1="260" x2="0" y2="310" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="%23603008"/><stop offset="1" stop-color="%23ae560c"/></linearGradient> <linearGradient id="b" x1="0" y1="245" x2="0" y2="295" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="%23949494"/><stop offset="1" stop-color="%23ffffff"/></linearGradient> <linearGradient id="c" x1="45" y1="20" x2="275" y2="260" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="%237ed9f4"/><stop offset="1" stop-color="%2341aecd"/></linearGradient> </defs> </svg>';
+
+.editor {
+    .editor-body {
+        background: #fff;
+        height: 30em;
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+
+        .editor-text {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-all;
+            overflow: auto;
+            height: 100%;
+        }
+    }
+}
+
+article.win {
+    .editor {
+        border: 1px gray solid;
+
+        .titlebar {
+            width: 100%;
+            height: 2.5em;
+            padding-left: 0.25em;
+            user-select: none;
+            overflow: hidden;
+            box-sizing: border-box;
+
+            &::before {
+                width: 1em;
+                height: 1em;
+                float: left;
+                margin: 0.75em;
+                content: url(@notepad-icon);
+            }
+
+            .titlebar-title {
+                width: 30%;
+                max-width: 20em;
+                min-width: 15em;
+                padding-left: 0.5em;
+                border-radius: 0.4em 0.4em 0 0;
+                height: calc(100% - 0.5em);
+                margin-top: 0.5em;
+                display: inline-flex;
+                align-items: center;
+                vertical-align: top;
+
+                .titlebar-icon {
+                    display: none;
+                }
+
+                .titlebar-text {
+                    font-size: 0.7em;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    line-height: 2em;
+                    flex: 1;
+                }
+
+                &::after {
+                    float: right;
+                    width: 2em;
+                    height: 2em;
+                }
+            }
+
+            .titlebar-extra {
+                width: 1.9em;
+                height: 1.9em;
+                display: inline-block;
+                border-radius: 0.2em;
+                margin: 0.42em 0.2em 0 0.2em;
+            }
+
+            .button {
+                float: right;
+                width: 2.5em;
+                height: 1.5em;
+
+                &.btn-2,
+                &.btn-3 {
+                    transition: background 0.2s;
+                }
+            }
+        }
+
+        .toolbar {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 2em;
+            padding-left: 0.5em;
+            user-select: none;
+            overflow: hidden;
+            box-sizing: border-box;
+
+            .menu {
+                font-size: 0.9em;
+                padding: 0.4em 0.8em;
+                height: 2em;
+                box-sizing: border-box;
+                line-height: 1.2;
+                margin: auto 0.2em;
+                border-radius: 0.3em;
+                transition: background 0.3s;
+            }
+
+        }
+    }
+}
+
+
+article.win {
+    .editor {
+        .titlebar {
+            background: #202020;
+            color: white;
+
+            .titlebar-title {
+                background: #2c2c2c;
+
+                &::after {
+                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -14 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
+                }
+            }
+
+            .button {
+                &.btn-3::after {
+                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -9 30 18"><path d="M-5 0 L5 0" stroke-width="1" stroke="white"/></svg>');
+                }
+
+                &.btn-2::after {
+                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -9 30 18"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="white"/></svg>');
+                }
+
+                &.btn-1::after {
+                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -9 30 18"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
+                }
+
+                &.btn-3:hover,
+                &.btn-2:hover {
+                    background: #626262;
+                }
+
+                &.btn-1:hover {
+                    background: #e81123;
+                }
+            }
+
+            .titlebar-extra {
+                &:hover {
+                    background: #2d2d2d;
+                }
+
+                &::after {
+                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-6 0 L6 0M0-6L0 6" stroke-width="1" stroke="white"/></svg>');
+                }
+            }
+        }
+
+        .toolbar {
+            color: white;
+            background: #2c2c2c;
+
+            .menu:hover {
+                background: #383838;
+            }
+        }
+
+        .editor-body {
+            background: #272727;
+            color: white;
+        }
+    }
+}
+
+.light {
+
+    article.win {
+        .editor {
+            .titlebar {
+                background: #e8e8e8;
+                color: #1a1a1a;
+
+                .titlebar-title {
+                    background: #f8f8f8;
+                }
+
+                .titlebar-extra {
+                    &:hover {
+                        background: #e0e0e0;
+                    }
+
+                    &::after {
+                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-7 0 L7 0M0-7L0 7" stroke-width="1" stroke="black"/></svg>');
+                    }
+                }
+
+                .button {
+                    &.btn-3::after {
+                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -9 30 18"><path d="M-5 0 L5 0" stroke-width="1" stroke="black"/></svg>');
+                    }
+
+                    &.btn-2::after {
+                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -9 30 18"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="black"/></svg>');
+                    }
+
+                    &.btn-1::after {
+                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -9 30 18"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
+                    }
+
+                    &.btn-3:hover,
+                    &.btn-2:hover {
+                        background: #dfdfdf;
+                    }
+
+                    &.btn-1:hover {
+                        background: #e81123;
+
+                        &::after {
+                            content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -9 30 18"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
+                        }
+                    }
+                }
+            }
+
+            .toolbar {
+                color: black;
+                background: #f8f8f8;
+                border-bottom: #eaeaea 1px solid;
+
+                .menu:hover {
+                    background: #e0e0e0;
+                }
+            }
+
+            .editor-body {
+                color: black;
+                background: #f9f9f9;
+            }
+        }
+    }
+}

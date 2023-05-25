@@ -1,0 +1,215 @@
+.browser .body {
+  background: #fff;
+  height: 30em;
+  width: 100%;
+  overflow-y: scroll;
+  padding: 8px;
+  box-sizing: border-box;
+}
+article.win .browser {
+  border: 1px gray solid;
+}
+article.win .browser .titlebar {
+  width: 100%;
+  height: 2.5em;
+  padding-left: 0.5em;
+  user-select: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+article.win .browser .titlebar .titlebar-title {
+  width: 30%;
+  max-width: 20em;
+  min-width: 15em;
+  padding-left: 0.5em;
+  border-radius: 0.4em 0.4em 0 0;
+  display: inline-flex;
+  height: calc(100% - 0.5em);
+  margin-top: 0.5em;
+  align-items: center;
+}
+article.win .browser .titlebar .titlebar-title .titlebar-icon {
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0 0.25em;
+}
+article.win .browser .titlebar .titlebar-title .titlebar-icon:empty::after {
+  content: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M24 10V25a2 2 0 0 1 -2 2h-14a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9zh-7v-7" fill="none" stroke="white" stroke-width="1.5"/></svg>');
+}
+article.win .browser .titlebar .titlebar-title .titlebar-text {
+  font-size: 0.9em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 2em;
+  flex: 1;
+}
+article.win .browser .titlebar .titlebar-title::after {
+  float: right;
+  width: 2em;
+  height: 2em;
+}
+article.win .browser .titlebar .titlebar-extra {
+  width: 1.9em;
+  height: 1.9em;
+  display: inline-block;
+  border-radius: 0.2em;
+  margin-top: 0.42em;
+  vertical-align: top;
+}
+article.win .browser .titlebar .button {
+  float: right;
+  height: 100%;
+  aspect-ratio: 1;
+  transition: background 0.3s;
+}
+article.win .browser .toolbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2.5em;
+  padding-left: 0.5em;
+  user-select: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+article.win .browser .toolbar .button {
+  aspect-ratio: 1;
+  height: 100%;
+  transition: background 0.3s;
+}
+article.win .browser .toolbar .address {
+  border: none;
+  flex: 1;
+  height: 2.5em;
+  border-radius: 1.25em;
+  font-family: "Open Sans";
+  padding: 0.2em 0.8em;
+  box-sizing: border-box;
+}
+article.win .browser .toolbar .address:focus,
+article.win .browser .toolbar .address:hover {
+  outline: 1px solid;
+  outline-offset: -1px;
+}
+article.win .browser .titlebar {
+  background: #202020;
+  color: white;
+}
+article.win .browser .titlebar .titlebar-title {
+  background: #3b3b3b;
+}
+article.win .browser .titlebar .titlebar-title::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -14 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
+}
+article.win .browser .titlebar .button.btn-3::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-5 0 L5 0" stroke-width="1" stroke="white"/></svg>');
+}
+article.win .browser .titlebar .button.btn-2::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="white"/></svg>');
+}
+article.win .browser .titlebar .button.btn-1::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
+}
+article.win .browser .titlebar .button.btn-3:hover,
+article.win .browser .titlebar .button.btn-2:hover {
+  background: #626262;
+}
+article.win .browser .titlebar .button.btn-1:hover {
+  background: #e81123;
+}
+article.win .browser .titlebar .titlebar-extra:hover {
+  background: #434343;
+}
+article.win .browser .titlebar .titlebar-extra::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-7 0 L7 0M0-7L0 7" stroke-width="1" stroke="white"/></svg>');
+}
+article.win .browser .toolbar {
+  color: white;
+  background: #3b3b3b;
+}
+article.win .browser .toolbar .button:hover {
+  background: #4a4a4a;
+}
+article.win .browser .toolbar .button.backward::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-6 0 L0 -6M-6 0L0 6M-6 0 L7 0" stroke-width="1" stroke="white" stroke-linecap="round"/></svg>');
+}
+article.win .browser .toolbar .button.foreward::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 L0 -6M6 0L0 6M6 0 L-7 0" stroke-width="1" stroke="white" stroke-linecap="round"/></svg>');
+}
+article.win .browser .toolbar .button.refresh::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 A6 6 1 1 1 5.2 -3M5.2 -3h-4M5.2 -3v-4" fill="none" stroke-width="1" stroke="white" stroke-linecap="round"/></svg>');
+}
+article.win .browser .toolbar .button.setting::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><g fill="white"><circle r="1"/><circle cx="6" r="1"/><circle cx="-6" r="1"/></g></svg>');
+}
+article.win .browser .toolbar .address {
+  background: #2b2b2b;
+  color: white;
+}
+article.win .browser .toolbar .address:focus,
+article.win .browser .toolbar .address:hover {
+  outline-color: #656565;
+}
+.light article.win .browser .titlebar {
+  background: #cdcdcd;
+  color: black;
+}
+.light article.win .browser .titlebar .titlebar-title {
+  background: #f7f7f7;
+}
+.light article.win .browser .titlebar .titlebar-title::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -14 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
+}
+.light article.win .browser .titlebar .button.btn-3::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-5 0 L5 0" stroke-width="1" stroke="black"/></svg>');
+}
+.light article.win .browser .titlebar .button.btn-2::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="black"/></svg>');
+}
+.light article.win .browser .titlebar .button.btn-1::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
+}
+.light article.win .browser .titlebar .button.btn-3:hover,
+.light article.win .browser .titlebar .button.btn-2:hover {
+  background: #dedede;
+}
+.light article.win .browser .titlebar .button.btn-1:hover {
+  background: #e81123;
+}
+.light article.win .browser .titlebar .button.btn-1:hover::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
+}
+.light article.win .browser .titlebar .titlebar-extra:hover {
+  background: #adadad;
+}
+.light article.win .browser .titlebar .titlebar-extra::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-7 0 L7 0M0-7L0 7" stroke-width="1" stroke="black"/></svg>');
+}
+.light article.win .browser .toolbar {
+  color: black;
+  background: #f7f7f7;
+}
+.light article.win .browser .toolbar .button:hover {
+  background: #e4e4e4;
+}
+.light article.win .browser .toolbar .button.backward::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-6 0 L0 -6M-6 0L0 6M-6 0 L7 0" stroke-width="1" stroke="black" stroke-linecap="round"/></svg>');
+}
+.light article.win .browser .toolbar .button.foreward::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 L0 -6M6 0L0 6M6 0 L-7 0" stroke-width="1" stroke="black" stroke-linecap="round"/></svg>');
+}
+.light article.win .browser .toolbar .button.refresh::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 A6 6 1 1 1 5.2 -3M5.2 -3h-4M5.2 -3v-4" fill="none" stroke-width="1" stroke="black" stroke-linecap="round"/></svg>');
+}
+.light article.win .browser .toolbar .button.setting::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><g fill="black"><circle r="1"/><circle cx="6" r="1"/><circle cx="-6" r="1"/></g></svg>');
+}
+.light article.win .browser .toolbar .address {
+  background: #ffffff;
+  color: black;
+}
+.light article.win .browser .toolbar .address:focus,
+.light article.win .browser .toolbar .address:hover {
+  outline-color: #cccccc;
+}
