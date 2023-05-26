@@ -241,9 +241,8 @@ article.win {
 
 article.mac {
     .slide {
-        border: 1px gray solid;
-
         .titlebar {
+            display: block;
             background: #cccccc;
             color: #595959;
             width: 100%;
@@ -251,36 +250,28 @@ article.mac {
             overflow: hidden;
             box-sizing: border-box;
             height: 1.5em;
-            padding-left: 0.5em;
-            display: block;
             text-align: center;
 
             .titlebar-title {
-                font-size: 0.8em;
-                display: inline-block;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-                vertical-align: middle;
-                width: calc(100% - 7em);
+                display: inline-flex;
+                width: calc(100% - 10em);
+                height: 100%;
+                vertical-align: top;
+                align-items: center;
+                justify-content: center;
+                margin-right: 4.3em;
+
+                .titlebar-text {
+                    font-size: 0.8em;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                }
             }
 
             .titlebar-extra {
                 display: none;
-            }
-
-            .button {
-                float: left;
-                margin: 0.15em 0.05em;
-                width: 1.2em;
-                height: 1.2em;
-                display: inline-flex;
-
-                &::after {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                }
             }
         }
 

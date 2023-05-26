@@ -70,6 +70,12 @@ article.win .terminal .titlebar .button.btn-1::after {
 .light article.win .terminal .titlebar .button.btn-1:hover::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
 }
+article.mac .browser .titlebar,
+article.mac .slide .titlebar,
+article.mac .editor .titlebar,
+article.mac .terminal .titlebar {
+  padding-left: 0.5em;
+}
 article.mac .browser .titlebar .button,
 article.mac .slide .titlebar .button,
 article.mac .editor .titlebar .button,
@@ -92,17 +98,17 @@ article.mac .browser .titlebar .button.btn-1::after,
 article.mac .slide .titlebar .button.btn-1::after,
 article.mac .editor .titlebar .button.btn-1::after,
 article.mac .terminal .titlebar .button.btn-1::after {
-  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="4" cx="5" cy="5" fill="%23fa625c"/></svg>');
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="3.5" cx="5" cy="5" fill="%23fa625c"/></svg>');
 }
 article.mac .browser .titlebar .button.btn-2::after,
 article.mac .slide .titlebar .button.btn-2::after,
 article.mac .editor .titlebar .button.btn-2::after,
 article.mac .terminal .titlebar .button.btn-2::after {
-  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="4" cx="5" cy="5" fill="%23fbb43a"/></svg>');
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="3.5" cx="5" cy="5" fill="%23fbb43a"/></svg>');
 }
 article.mac .browser .titlebar .button.btn-3::after,
 article.mac .slide .titlebar .button.btn-3::after,
 article.mac .editor .titlebar .button.btn-3::after,
 article.mac .terminal .titlebar .button.btn-3::after {
-  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="4" cx="5" cy="5" fill="%233ec544"/></svg>');
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="3.5" cx="5" cy="5" fill="%233ec544"/></svg>');
 }

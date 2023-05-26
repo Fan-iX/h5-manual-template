@@ -1,21 +1,14 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
-    <path d="M260 20a15 15 0 0 1 15 15v260a15 15 0 0 1 -15 15H60a15 15 0 0 1-15-15V35a15 15 0 0 1 15-15z"
-        fill="url(#a)" />
-    <path d="M260 20a15 15 0 0 1 15 15v235a15 15 0 0 1 -15 15H60a15 15 0 0 1-15-15V35a15 15 0 0 1 15-15z"
-        fill="url(#b)" />
-    <path d="M260 20a15 15 0 0 1 15 15v210a15 15 0 0 1 -15 15H60a15 15 0 0 1-15-15V35a15 15 0 0 1 15-15z"
-        fill="url(#c)" />
-    <path d="M87 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-3a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z"
-        fill="#057093" />
-    <path d="M137 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-4a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z"
-        fill="#057093" />
-    <path d="M187 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-4a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z"
-        fill="#057093" />
-    <path d="M237 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-4a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z"
-        fill="#057093" />
-    <path d="M232 84a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-144a5 5 0 0 1-5-5v-10a5 5 0 0 1 5-5z" fill="#057093" />
-    <path d="M232 135a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-144a5 5 0 0 1-5-5v-10a5 5 0 0 1 5-5z" fill="#057093" />
-    <path d="M232 186a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-144a5 5 0 0 1-5-5v-10a5 5 0 0 1 5-5z" fill="#057093" />
+    <rect width="230" height="290" x="45" y="20" rx="15" fill="url(#a)" />
+    <rect width="230" height="265" x="45" y="20" rx="15" fill="url(#b)" />
+    <rect width="230" height="240" x="45" y="20" rx="15" fill="url(#c)" />
+    <rect width="26" height="40" x="72" y="1" rx="11" fill="#057093" />
+    <rect width="26" height="40" x="122" y="1" rx="11" fill="#057093" />
+    <rect width="26" height="40" x="172" y="1" rx="11" fill="#057093" />
+    <rect width="26" height="40" x="222" y="1" rx="11" fill="#057093" />
+    <rect width="154" height="20" x="83" y="84" rx="5" fill="#057093" />
+    <rect width="154" height="20" x="83" y="135" rx="5" fill="#057093" />
+    <rect width="154" height="20" x="83" y="186" rx="5" fill="#057093" />
     <defs>
         <linearGradient id="a" x1="0" y1="260" x2="0" y2="310" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#603008" />

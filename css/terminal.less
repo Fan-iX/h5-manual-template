@@ -488,6 +488,7 @@ article.win {
                 &::after {
                     margin-top: -0.6em;
                 }
+
                 &.btn-1:hover {
                     background: #c42b1c;
                 }
@@ -534,31 +535,35 @@ article.win {
 
 article.mac {
     .terminal {
-        .titletext {
-            padding-top: 0.2em;
-            display: inline-block;
-        }
-
         .titlebar {
-            font-size: 0.9rem;
             display: block;
             text-align: center;
-            min-height: 1.2em;
-
-            .titlebar-icon {
-                display: inline;
-            }
-
-            .titlebar-icon::before {
-                content: "🏠";
-            }
+            height: 1.5em;
+            width: 100%;
+            user-select: none;
+            overflow: hidden;
+            box-sizing: border-box;
 
             .titlebar-title {
-                display: inline-block;
-                max-width: calc(100% - 6em);
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                display: inline-flex;
+                width: calc(100% - 10em);
+                height: 100%;
+                vertical-align: top;
+                align-items: center;
+                justify-content: center;
+                margin-right: 4.3em;
+
+                .titlebar-text {
+                    font-size: 0.8em;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    vertical-align: middle;
+
+                    &::before {
+                        content: "🏠 ";
+                    }
+                }
             }
 
             .titlebar-extra {

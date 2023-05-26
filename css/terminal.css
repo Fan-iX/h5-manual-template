@@ -388,28 +388,33 @@ article.win .terminal.win32 .terminal-code-posh-path {
   background: white;
   color: black;
 }
-article.mac .terminal .titletext {
-  padding-top: 0.2em;
-  display: inline-block;
-}
 article.mac .terminal .titlebar {
-  font-size: 0.9rem;
   display: block;
   text-align: center;
-  min-height: 1.2em;
-}
-article.mac .terminal .titlebar .titlebar-icon {
-  display: inline;
-}
-article.mac .terminal .titlebar .titlebar-icon::before {
-  content: "🏠";
+  height: 1.5em;
+  width: 100%;
+  user-select: none;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 article.mac .terminal .titlebar .titlebar-title {
-  display: inline-block;
-  max-width: calc(100% - 6em);
+  display: inline-flex;
+  width: calc(100% - 10em);
+  height: 100%;
+  vertical-align: top;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4.3em;
+}
+article.mac .terminal .titlebar .titlebar-title .titlebar-text {
+  font-size: 0.8em;
+  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+article.mac .terminal .titlebar .titlebar-title .titlebar-text::before {
+  content: "🏠 ";
 }
 article.mac .terminal .titlebar .titlebar-extra {
   display: none;
