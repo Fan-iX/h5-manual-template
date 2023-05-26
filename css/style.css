@@ -82,3 +82,8 @@ article {
 [contentEditable=true]:focus-visible {
     outline: none;
 }
+
+pre,
+code {
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+}

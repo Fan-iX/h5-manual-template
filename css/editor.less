@@ -2,18 +2,22 @@
 
 .editor {
     .editor-body {
-        background: #fff;
+        display: flex;
         height: 30em;
         width: 100%;
-        padding: 16px;
-        box-sizing: border-box;
 
         .editor-text {
-            margin: 0;
+            background: #fff;
+            padding: 16px;
             white-space: pre-wrap;
             word-break: break-all;
+            box-sizing: border-box;
             overflow: auto;
             height: 100%;
+            width: 100%;
+            outline: none;
+            resize: none;
+            border: none;
         }
     }
 }
@@ -169,7 +173,7 @@ article.win {
             }
         }
 
-        .editor-body {
+        .editor-text {
             background: #272727;
             color: white;
         }
@@ -221,7 +225,7 @@ article.win {
                 }
             }
 
-            .editor-body {
+            .editor-text {
                 color: black;
                 background: #f9f9f9;
             }

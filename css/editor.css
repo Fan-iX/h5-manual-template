@@ -1,16 +1,20 @@
 .editor .editor-body {
-  background: #fff;
+  display: flex;
   height: 30em;
   width: 100%;
-  padding: 16px;
-  box-sizing: border-box;
 }
 .editor .editor-body .editor-text {
-  margin: 0;
+  background: #fff;
+  padding: 16px;
   white-space: pre-wrap;
   word-break: break-all;
+  box-sizing: border-box;
   overflow: auto;
   height: 100%;
+  width: 100%;
+  outline: none;
+  resize: none;
+  border: none;
 }
 article.win .editor .titlebar {
   width: 100%;
@@ -128,7 +132,7 @@ article.win .editor .toolbar {
 article.win .editor .toolbar .menu:hover {
   background: #383838;
 }
-article.win .editor .editor-body {
+article.win .editor .editor-text {
   background: #272727;
   color: white;
 }
@@ -160,7 +164,7 @@ article.win .editor .editor-body {
 .light article.win .editor .toolbar .menu:hover {
   background: #e0e0e0;
 }
-.light article.win .editor .editor-body {
+.light article.win .editor .editor-text {
   color: black;
   background: #f9f9f9;
 }
