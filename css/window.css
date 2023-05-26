@@ -1,0 +1,108 @@
+.browser,
+.slide,
+.editor,
+.terminal {
+  border: 1px gray solid;
+}
+article.win .browser .titlebar .button,
+article.win .slide .titlebar .button,
+article.win .editor .titlebar .button,
+article.win .terminal .titlebar .button {
+  float: right;
+  width: 3em;
+  display: inline-flex;
+}
+article.win .browser .titlebar .button::after,
+article.win .slide .titlebar .button::after,
+article.win .editor .titlebar .button::after,
+article.win .terminal .titlebar .button::after {
+  width: 100%;
+}
+article.win .browser .titlebar .button.btn-2,
+article.win .slide .titlebar .button.btn-2,
+article.win .editor .titlebar .button.btn-2,
+article.win .terminal .titlebar .button.btn-2,
+article.win .browser .titlebar .button.btn-3,
+article.win .slide .titlebar .button.btn-3,
+article.win .editor .titlebar .button.btn-3,
+article.win .terminal .titlebar .button.btn-3 {
+  transition: background 0.2s;
+}
+article.win .browser .titlebar .button.btn-3::after,
+article.win .slide .titlebar .button.btn-3::after,
+article.win .editor .titlebar .button.btn-3::after,
+article.win .terminal .titlebar .button.btn-3::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-5 0 L5 0" stroke-width="1" stroke="white"/></svg>');
+}
+article.win .browser .titlebar .button.btn-2::after,
+article.win .slide .titlebar .button.btn-2::after,
+article.win .editor .titlebar .button.btn-2::after,
+article.win .terminal .titlebar .button.btn-2::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="white"/></svg>');
+}
+article.win .browser .titlebar .button.btn-1::after,
+article.win .slide .titlebar .button.btn-1::after,
+article.win .editor .titlebar .button.btn-1::after,
+article.win .terminal .titlebar .button.btn-1::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
+}
+.light article.win .browser .titlebar .button.btn-3::after,
+.light article.win .slide .titlebar .button.btn-3::after,
+.light article.win .editor .titlebar .button.btn-3::after,
+.light article.win .terminal .titlebar .button.btn-3::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-5 0 L5 0" stroke-width="1" stroke="black"/></svg>');
+}
+.light article.win .browser .titlebar .button.btn-2::after,
+.light article.win .slide .titlebar .button.btn-2::after,
+.light article.win .editor .titlebar .button.btn-2::after,
+.light article.win .terminal .titlebar .button.btn-2::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="black"/></svg>');
+}
+.light article.win .browser .titlebar .button.btn-1::after,
+.light article.win .slide .titlebar .button.btn-1::after,
+.light article.win .editor .titlebar .button.btn-1::after,
+.light article.win .terminal .titlebar .button.btn-1::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
+}
+.light article.win .browser .titlebar .button.btn-1:hover::after,
+.light article.win .slide .titlebar .button.btn-1:hover::after,
+.light article.win .editor .titlebar .button.btn-1:hover::after,
+.light article.win .terminal .titlebar .button.btn-1:hover::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
+}
+article.mac .browser .titlebar .button,
+article.mac .slide .titlebar .button,
+article.mac .editor .titlebar .button,
+article.mac .terminal .titlebar .button {
+  float: left;
+  margin: 0.15em 0.05em;
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-flex;
+}
+article.mac .browser .titlebar .button::after,
+article.mac .slide .titlebar .button::after,
+article.mac .editor .titlebar .button::after,
+article.mac .terminal .titlebar .button::after {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+article.mac .browser .titlebar .button.btn-1::after,
+article.mac .slide .titlebar .button.btn-1::after,
+article.mac .editor .titlebar .button.btn-1::after,
+article.mac .terminal .titlebar .button.btn-1::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="4" cx="5" cy="5" fill="%23fa625c"/></svg>');
+}
+article.mac .browser .titlebar .button.btn-2::after,
+article.mac .slide .titlebar .button.btn-2::after,
+article.mac .editor .titlebar .button.btn-2::after,
+article.mac .terminal .titlebar .button.btn-2::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="4" cx="5" cy="5" fill="%23fbb43a"/></svg>');
+}
+article.mac .browser .titlebar .button.btn-3::after,
+article.mac .slide .titlebar .button.btn-3::after,
+article.mac .editor .titlebar .button.btn-3::after,
+article.mac .terminal .titlebar .button.btn-3::after {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="4" cx="5" cy="5" fill="%233ec544"/></svg>');
+}

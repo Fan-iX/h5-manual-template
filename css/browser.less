@@ -13,8 +13,6 @@
 
 article.win {
     .browser {
-        border: 1px gray solid;
-
         .titlebar {
             width: 100%;
             height: 2.5em;
@@ -70,10 +68,11 @@ article.win {
             }
 
             .button {
-                float: right;
-                height: 100%;
-                aspect-ratio: 1;
-                transition: background 0.3s;
+                height: 2.5em;
+
+                &::after{
+                    margin-top: -0.25em;
+                }
             }
         }
 
@@ -128,18 +127,6 @@ article.win {
             }
 
             .button {
-                &.btn-3::after {
-                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-5 0 L5 0" stroke-width="1" stroke="white"/></svg>');
-                }
-
-                &.btn-2::after {
-                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="white"/></svg>');
-                }
-
-                &.btn-1::after {
-                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
-                }
-
                 &.btn-3:hover,
                 &.btn-2:hover {
                     background: #626262;
@@ -216,18 +203,6 @@ article.win {
                 }
 
                 .button {
-                    &.btn-3::after {
-                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-5 0 L5 0" stroke-width="1" stroke="black"/></svg>');
-                    }
-
-                    &.btn-2::after {
-                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="black"/></svg>');
-                    }
-
-                    &.btn-1::after {
-                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
-                    }
-
                     &.btn-3:hover,
                     &.btn-2:hover {
                         background: #dedede;
