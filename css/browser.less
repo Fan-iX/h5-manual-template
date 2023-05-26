@@ -1,4 +1,4 @@
-@blank-icon:'data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M24 10V25a2 2 0 0 1 -2 2h-14a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9zh-7v-7" fill="none" stroke="white" stroke-width="1.5"/></svg>';
+@blank-icon: 'data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M24 10V25a2 2 0 0 1 -2 2h-14a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9zh-7v-7" fill="none" stroke="white" stroke-width="1.5"/></svg>';
 
 .browser {
     .body {
@@ -9,11 +9,23 @@
         padding: 8px;
         box-sizing: border-box;
     }
+
+    .titlebar {
+        display: none;
+    }
+
+    .toolbar {
+        .address{
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
 }
 
 article.win {
     .browser {
         .titlebar {
+            display: block;
             width: 100%;
             height: 2.5em;
             padding-left: 0.5em;
@@ -70,7 +82,7 @@ article.win {
             .button {
                 height: 2.5em;
 
-                &::after{
+                &::after {
                     margin-top: -0.25em;
                 }
             }
@@ -127,6 +139,7 @@ article.win {
             }
 
             .button {
+
                 &.btn-3:hover,
                 &.btn-2:hover {
                     background: #626262;
@@ -203,6 +216,7 @@ article.win {
                 }
 
                 .button {
+
                     &.btn-3:hover,
                     &.btn-2:hover {
                         background: #dedede;

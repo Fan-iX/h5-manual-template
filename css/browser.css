@@ -6,7 +6,15 @@
   padding: 8px;
   box-sizing: border-box;
 }
+.browser .titlebar {
+  display: none;
+}
+.browser .toolbar .address {
+  width: 100%;
+  box-sizing: border-box;
+}
 article.win .browser .titlebar {
+  display: block;
   width: 100%;
   height: 2.5em;
   padding-left: 0.5em;

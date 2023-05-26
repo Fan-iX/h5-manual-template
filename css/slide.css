@@ -1,3 +1,6 @@
+.slide .titlebar {
+  display: none;
+}
 .slide .body {
   height: 30em;
   width: 100%;
@@ -73,6 +76,7 @@ article.win .slide {
   border: 1px gray solid;
 }
 article.win .slide .titlebar {
+  display: block;
   padding-left: 0.25em;
   user-select: none;
   box-sizing: border-box;
