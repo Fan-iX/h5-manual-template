@@ -1,3 +1,34 @@
+.terminal .terminal-code .posh.ps1 {
+  color: var(--tc-foreground);
+}
+.terminal .terminal-code .posh.ps1::before {
+  content: "PS ";
+}
+.terminal .terminal-code .posh.ps1::after {
+  content: "> ";
+}
+.terminal .terminal-code .bash.ps1-w {
+  color: var(--tc-brightblue);
+}
+.terminal .terminal-code .bash.ps1-w::before {
+  content: ": ";
+  color: var(--tc-foreground);
+}
+.terminal .terminal-code .bash.ps1-u {
+  color: var(--tc-brightgreen);
+}
+.terminal .terminal-code .bash.ps1-h {
+  color: var(--tc-brightgreen);
+}
+.terminal .terminal-code .bash.ps1-h::before {
+  content: "@";
+}
+.terminal .terminal-code .bash.ps1::after {
+  content: "]$ ";
+}
+.terminal .terminal-code .bash.ps1::before {
+  content: "[";
+}
 .terminal .titlebar {
   display: none;
 }
@@ -20,6 +51,12 @@
   font-size: 1rem !important;
   box-sizing: border-box;
   overflow: auto;
+}
+.terminal .terminal-code .ps1 {
+  user-select: none;
+}
+.terminal .terminal-code details[open] .ps1 {
+  user-select: auto;
 }
 .terminal ::-webkit-scrollbar {
   width: 0.4em;
@@ -57,77 +94,107 @@
 .terminal .terminal-panel.vertical > .terminal-code:last-child {
   border-bottom: none;
 }
+.terminal {
+  --tc-foreground: #c0c0c0;
+  --tc-background: #000000;
+  --tc-black: #000000;
+  --tc-white: #e5e5e5;
+  --tc-red: #cd3131;
+  --tc-green: #0DBC79;
+  --tc-yellow: #e5e510;
+  --tc-blue: #2472c8;
+  --tc-magenta: #bc3fbc;
+  --tc-cyan: #11a8cd;
+  --tc-brightblack: #666666;
+  --tc-brightwhite: #e5e5e5;
+  --tc-brightred: #f14c4c;
+  --tc-brightgreen: #23d18b;
+  --tc-brightyellow: #f5f543;
+  --tc-brightblue: #3b8eea;
+  --tc-brightmagenta: #d670d6;
+  --tc-brightcyan: #29b8db;
+}
+.light .terminal {
+  --tc-foreground: #333333;
+  --tc-background: #FFFFFF;
+  --tc-black: #000000;
+  --tc-white: #555555;
+  --tc-red: #cd3131;
+  --tc-green: #00BC00;
+  --tc-yellow: #949800;
+  --tc-blue: #0451a5;
+  --tc-magenta: #d670d6;
+  --tc-cyan: #0598bc;
+  --tc-brightblack: #666666;
+  --tc-brightwhite: #a5a5a5;
+  --tc-brightred: #cd3131;
+  --tc-brightgreen: #14CE14;
+  --tc-brightyellow: #b5ba00;
+  --tc-brightblue: #0451a5;
+  --tc-brightmagenta: #bc05bc;
+  --tc-brightcyan: #0598bc;
+}
+article.mac .terminal {
+  --tc-foreground: #f0f0f0;
+  --tc-background: #1b1b1b;
+}
+article.win .terminal.win32 {
+  --tc-foreground: #eeedf0;
+  --tc-background: #012456;
+}
 .terminal .terminal-panel {
-  background: #000000;
+  background: var(--tc-background, black);
 }
 .terminal .terminal-code {
-  color: #c0c0c0;
-}
-.terminal .terminal-code .terminal-code-posh-prompt {
-  color: #c0c0c0;
-}
-.terminal .terminal-code .terminal-code-posh-path {
-  color: #c0c0c0;
-}
-.terminal .terminal-code .terminal-code-bash-prompt {
-  color: #23d18b;
-}
-.terminal .terminal-code .terminal-code-bash-path {
-  color: #3b8eea;
+  color: var(--tc-foreground, silver);
 }
 .terminal .terminal-code .terminal-code-black {
-  color: #000000;
-}
-.terminal .terminal-code .terminal-code-red {
-  color: #cd3131;
-}
-.terminal .terminal-code .terminal-code-green {
-  color: #0DBC79;
-}
-.terminal .terminal-code .terminal-code-yellow {
-  color: #e5e510;
-}
-.terminal .terminal-code .terminal-code-blue {
-  color: #2472c8;
-}
-.terminal .terminal-code .terminal-code-purple {
-  color: #bc3fbc;
-}
-.terminal .terminal-code .terminal-code-cyan {
-  color: #11a8cd;
+  color: var(--tc-black, black);
 }
 .terminal .terminal-code .terminal-code-white {
-  color: #e5e5e5;
+  color: var(--tc-white, white);
 }
-.terminal .terminal-code .terminal-code-brown {
-  color: #a05803;
+.terminal .terminal-code .terminal-code-red {
+  color: var(--tc-red, red);
 }
-.terminal .terminal-code .terminal-code-pink {
-  color: #bc3fbc;
+.terminal .terminal-code .terminal-code-green {
+  color: var(--tc-green, green);
+}
+.terminal .terminal-code .terminal-code-yellow {
+  color: var(--tc-yellow, yellow);
+}
+.terminal .terminal-code .terminal-code-blue {
+  color: var(--tc-blue, blue);
+}
+.terminal .terminal-code .terminal-code-magenta {
+  color: var(--tc-magenta, magenta);
+}
+.terminal .terminal-code .terminal-code-cyan {
+  color: var(--tc-cyan, cyan);
 }
 .terminal .terminal-code .terminal-code-brightblack {
-  color: #666666;
-}
-.terminal .terminal-code .terminal-code-brightred {
-  color: #f14c4c;
-}
-.terminal .terminal-code .terminal-code-brightgreen {
-  color: #23d18b;
-}
-.terminal .terminal-code .terminal-code-brightyellow {
-  color: #f5f543;
-}
-.terminal .terminal-code .terminal-code-brightblue {
-  color: #3b8eea;
-}
-.terminal .terminal-code .terminal-code-brightpurple {
-  color: #d670d6;
-}
-.terminal .terminal-code .terminal-code-brightcyan {
-  color: #29b8db;
+  color: var(--tc-brightblack, gray);
 }
 .terminal .terminal-code .terminal-code-brightwhite {
-  color: #e5e5e5;
+  color: var(--tc-brightwhite, white);
+}
+.terminal .terminal-code .terminal-code-brightred {
+  color: var(--tc-brightred, lightcoral);
+}
+.terminal .terminal-code .terminal-code-brightgreen {
+  color: var(--tc-brightgreen, limegreen);
+}
+.terminal .terminal-code .terminal-code-brightyellow {
+  color: var(--tc-brightgreen, lightyellow);
+}
+.terminal .terminal-code .terminal-code-brightblue {
+  color: var(--tc-brightblue, deepskyblue);
+}
+.terminal .terminal-code .terminal-code-brightmagenta {
+  color: var(--tc-brightmagenta, violet);
+}
+.terminal .terminal-code .terminal-code-brightcyan {
+  color: var(--tc-brightcyan, lightcyan);
 }
 .terminal ::-webkit-scrollbar-thumb {
   background: #c0c0c0;
@@ -139,76 +206,10 @@
   background: #787878;
 }
 .light .terminal .terminal-panel {
-  background: #FFFFFF;
+  color: var(--tc-background, white);
 }
 .light .terminal .terminal-code {
-  color: #333333;
-}
-.light .terminal .terminal-code .terminal-code-posh-prompt {
-  color: #333333;
-}
-.light .terminal .terminal-code .terminal-code-posh-path {
-  color: #333333;
-}
-.light .terminal .terminal-code .terminal-code-bash-prompt {
-  color: #14CE14;
-}
-.light .terminal .terminal-code .terminal-code-bash-path {
-  color: #0451a5;
-}
-.light .terminal .terminal-code .terminal-code-black {
-  color: #000000;
-}
-.light .terminal .terminal-code .terminal-code-red {
-  color: #cd3131;
-}
-.light .terminal .terminal-code .terminal-code-green {
-  color: #00BC00;
-}
-.light .terminal .terminal-code .terminal-code-yellow {
-  color: #949800;
-}
-.light .terminal .terminal-code .terminal-code-blue {
-  color: #0451a5;
-}
-.light .terminal .terminal-code .terminal-code-purple {
-  color: #d670d6;
-}
-.light .terminal .terminal-code .terminal-code-cyan {
-  color: #0598bc;
-}
-.light .terminal .terminal-code .terminal-code-white {
-  color: #555555;
-}
-.light .terminal .terminal-code .terminal-code-brown {
-  color: #a05803;
-}
-.light .terminal .terminal-code .terminal-code-pink {
-  color: #bc3fbc;
-}
-.light .terminal .terminal-code .terminal-code-brightblack {
-  color: #666666;
-}
-.light .terminal .terminal-code .terminal-code-brightred {
-  color: #cd3131;
-}
-.light .terminal .terminal-code .terminal-code-brightgreen {
-  color: #14CE14;
-}
-.light .terminal .terminal-code .terminal-code-brightyellow {
-  color: #b5ba00;
-}
-.light .terminal .terminal-code .terminal-code-brightblue {
-  color: #0451a5;
-}
-.light .terminal .terminal-code .terminal-code-brightpurple {
-  color: #bc05bc;
-}
-.light .terminal .terminal-code .terminal-code-brightcyan {
-  color: #0598bc;
-}
-.light .terminal .terminal-code .terminal-code-brightwhite {
-  color: #a5a5a5;
+  color: var(--tc-foreground, #333333);
 }
 article.win .terminal:not(.win32) .titlebar {
   display: block;
@@ -372,18 +373,6 @@ article.win .terminal.win32 .titlebar .button.btn-2:hover {
 article.win .terminal.win32 .terminal-code {
   font-size: 0.9rem !important;
 }
-article.win .terminal.win32 .terminal-panel {
-  background: #012456;
-}
-article.win .terminal.win32 .terminal-code {
-  color: #eeedf0;
-}
-article.win .terminal.win32 .terminal-code-posh-prompt {
-  color: #eeedf0;
-}
-article.win .terminal.win32 .terminal-code-posh-path {
-  color: #eeedf0;
-}
 .light article.win .terminal.win32 .titlebar {
   background: white;
   color: black;
@@ -425,10 +414,4 @@ article.mac .terminal .terminal-code {
 article.mac .terminal .titlebar {
   background: linear-gradient(to top, #333333, #404040);
   color: #aaaaaa;
-}
-article.mac .terminal .terminal-panel {
-  background: #1b1b1b;
-}
-article.mac .terminal .terminal-code {
-  color: #f0f0f0;
 }

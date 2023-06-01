@@ -1,0 +1,9 @@
+.terminal .terminal-code .posh.ps1 {
+  color: var(--tc-foreground);
+}
+.terminal .terminal-code .posh.ps1::before {
+  content: "PS ";
+}
+.terminal .terminal-code .posh.ps1::after {
+  content: "> ";
+}

@@ -26,6 +26,11 @@ pre.terminal-code details[open] summary::before {
 }
 
 pre.terminal-code details {
+    display: inline-block;
+}
+
+pre.terminal-code details summary {
+    display: inline-block;
     text-indent: -1ch;
 }
 
