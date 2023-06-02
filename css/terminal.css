@@ -1,33 +1,14 @@
 .terminal .terminal-code .posh.ps1 {
   color: var(--tc-foreground);
 }
-.terminal .terminal-code .posh.ps1::before {
-  content: "PS ";
-}
-.terminal .terminal-code .posh.ps1::after {
-  content: "> ";
-}
 .terminal .terminal-code .bash.ps1-w {
   color: var(--tc-brightblue);
-}
-.terminal .terminal-code .bash.ps1-w::before {
-  content: ": ";
-  color: var(--tc-foreground);
 }
 .terminal .terminal-code .bash.ps1-u {
   color: var(--tc-brightgreen);
 }
 .terminal .terminal-code .bash.ps1-h {
   color: var(--tc-brightgreen);
-}
-.terminal .terminal-code .bash.ps1-h::before {
-  content: "@";
-}
-.terminal .terminal-code .bash.ps1::after {
-  content: "]$ ";
-}
-.terminal .terminal-code .bash.ps1::before {
-  content: "[";
 }
 .terminal .titlebar {
   display: none;

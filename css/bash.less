@@ -3,10 +3,6 @@
         .bash {
             &.ps1-w {
                 color: var(--tc-brightblue);
-                &::before{
-                    content: ": ";
-                    color: var(--tc-foreground);
-                }
             }
 
             &.ps1-u {
@@ -15,18 +11,6 @@
 
             &.ps1-h {
                 color: var(--tc-brightgreen);
-                &::before{
-                    content: "@";
-                }
-            }
-
-            &.ps1{
-                &::after{
-                    content: "]$ ";
-                }
-                &::before{
-                    content: "[";
-                }
             }
         }
     }
