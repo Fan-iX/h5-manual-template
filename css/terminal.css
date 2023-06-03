@@ -115,11 +115,11 @@
   --tc-brightmagenta: #bc05bc;
   --tc-brightcyan: #0598bc;
 }
-article.mac .terminal {
+.mac .terminal {
   --tc-foreground: #f0f0f0;
   --tc-background: #1b1b1b;
 }
-article.win .terminal.win32 {
+.win .terminal.win32 {
   --tc-foreground: #eeedf0;
   --tc-background: #012456;
 }
@@ -192,7 +192,7 @@ article.win .terminal.win32 {
 .light .terminal .terminal-code {
   color: var(--tc-foreground, #333333);
 }
-article.win .terminal:not(.win32) .titlebar {
+.win .terminal:not(.win32) .titlebar {
   display: block;
   width: 100%;
   height: 2.5em;
@@ -201,7 +201,7 @@ article.win .terminal:not(.win32) .titlebar {
   overflow: hidden;
   box-sizing: border-box;
 }
-article.win .terminal:not(.win32) .titlebar .titlebar-title {
+.win .terminal:not(.win32) .titlebar .titlebar-title {
   width: 30%;
   max-width: 20em;
   min-width: 15em;
@@ -212,14 +212,14 @@ article.win .terminal:not(.win32) .titlebar .titlebar-title {
   display: inline-flex;
   align-items: center;
 }
-article.win .terminal:not(.win32) .titlebar .titlebar-title .titlebar-icon {
+.win .terminal:not(.win32) .titlebar .titlebar-title .titlebar-icon {
   width: 1.2em;
   height: 1.2em;
   display: inline-block;
   vertical-align: middle;
   background: transparent url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="95.1" y1="91.8" x2="26.85" y2="30.82"><stop offset="0" stop-color="%235391fe"/><stop offset="1" stop-color="%233e6dbf"/></linearGradient><path fill="url(%23a)" d="M9.491 109c-1.62 0-3.021-.638-3.944-1.798-.944-1.185-1.268-2.814-.889-4.47l17.834-77.911C23.239 21.557 26.376 19 29.634 19H118.5c1.62 0 3.021.638 3.945 1.798.944 1.184 1.268 2.814.889 4.47L105.5 103.179c-.747 3.264-3.884 5.822-7.143 5.822H9.491z"/><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="26.2" y1="30" x2="93.75" y2="90.7"><stop offset="0" stop-color="%235391fe"/><stop offset="1" stop-color="%233e6dbf"/></linearGradient><path fill="url(%23b)" d="M29.634 20H118.5c2.769 0 4.496 2.259 3.858 5.045l-17.834 77.911c-.638 2.786-3.399 5.045-6.168 5.045H9.491c-2.769 0-4.496-2.258-3.858-5.045l17.834-77.911C24.104 22.259 26.866 20 29.634 20z"/><path fill="%232C5591" d="M64.165 87.558h21.613c2.513 0 4.55 2.125 4.55 4.746 0 2.621-2.037 4.747-4.55 4.747H64.165c-2.513 0-4.55-2.125-4.55-4.747 0-2.621 2.037-4.746 4.55-4.746zM78.184 66.455c-.372.749-1.144 1.575-2.509 2.534L35.562 97.798c-2.19 1.591-5.334 1.001-7.021-1.319-1.687-2.32-1.28-5.49.91-7.082l36.173-26.194v-.538L42.896 38.487c-1.854-1.972-1.661-5.161.431-7.124 2.092-1.962 5.29-1.954 7.144.018l27.271 29.012c1.548 1.647 1.663 4.141.442 6.062z"/><path fill="%23FFF" d="M77.184 65.455c-.372.749-1.144 1.575-2.509 2.534L34.562 96.798c-2.19 1.591-5.334 1.001-7.021-1.319-1.687-2.32-1.28-5.49.91-7.082l36.173-26.194v-.538L41.896 37.487c-1.854-1.972-1.661-5.161.431-7.124 2.092-1.962 5.29-1.954 7.144.018l27.271 29.012c1.548 1.647 1.663 4.141.442 6.062zM63.55 87h21.613c2.513 0 4.55 2.015 4.55 4.5s-2.037 4.5-4.55 4.5H63.55C61.037 96 59 93.985 59 91.5s2.037-4.5 4.55-4.5z"/></svg>') no-repeat center center;
 }
-article.win .terminal:not(.win32) .titlebar .titlebar-title .titlebar-text {
+.win .terminal:not(.win32) .titlebar .titlebar-title .titlebar-text {
   font-size: 0.8em;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -228,12 +228,12 @@ article.win .terminal:not(.win32) .titlebar .titlebar-title .titlebar-text {
   font-weight: bold;
   flex: 1;
 }
-article.win .terminal:not(.win32) .titlebar .titlebar-title::after {
+.win .terminal:not(.win32) .titlebar .titlebar-title::after {
   float: right;
   width: 2em;
   height: 2em;
 }
-article.win .terminal:not(.win32) .titlebar .titlebar-extra {
+.win .terminal:not(.win32) .titlebar .titlebar-extra {
   width: 1.8em;
   height: 1.8em;
   display: inline-block;
@@ -241,66 +241,66 @@ article.win .terminal:not(.win32) .titlebar .titlebar-extra {
   margin: 0.5em 0;
   vertical-align: top;
 }
-article.win .terminal:not(.win32) .titlebar .button {
+.win .terminal:not(.win32) .titlebar .button {
   height: 2.5em;
 }
-article.win .terminal:not(.win32) .titlebar .button::after {
+.win .terminal:not(.win32) .titlebar .button::after {
   margin-top: -0.3em;
 }
-article.win .terminal:not(.win32) .titlebar {
+.win .terminal:not(.win32) .titlebar {
   background: #333333;
   color: white;
 }
-article.win .terminal:not(.win32) .titlebar .titlebar-title {
+.win .terminal:not(.win32) .titlebar .titlebar-title {
   background: #000000;
 }
-article.win .terminal:not(.win32) .titlebar .titlebar-title::after {
+.win .terminal:not(.win32) .titlebar .titlebar-title::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -14 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
 }
-article.win .terminal:not(.win32) .titlebar .titlebar-extra {
+.win .terminal:not(.win32) .titlebar .titlebar-extra {
   color: #ffffff;
 }
-article.win .terminal:not(.win32) .titlebar .titlebar-extra:hover {
+.win .terminal:not(.win32) .titlebar .titlebar-extra:hover {
   background: #3b3b3b;
 }
-article.win .terminal:not(.win32) .titlebar .button.btn-3:hover,
-article.win .terminal:not(.win32) .titlebar .button.btn-2:hover {
+.win .terminal:not(.win32) .titlebar .button.btn-3:hover,
+.win .terminal:not(.win32) .titlebar .button.btn-2:hover {
   background: #3a3a3a;
 }
-article.win .terminal:not(.win32) .titlebar .button.btn-1:hover {
+.win .terminal:not(.win32) .titlebar .button.btn-1:hover {
   background: #e81123;
   color: white;
 }
-article.win .terminal:not(.win32) .titlebar .titlebar-extra::after {
+.win .terminal:not(.win32) .titlebar .titlebar-extra::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-6 0 L6 0M0-6L0 6" stroke-width="1" stroke="white"/></svg>');
 }
-.light article.win .terminal:not(.win32) .titlebar {
+.win.light .terminal:not(.win32) .titlebar {
   background: #e8e8e8;
   color: black;
 }
-.light article.win .terminal:not(.win32) .titlebar .titlebar-title {
+.win.light .terminal:not(.win32) .titlebar .titlebar-title {
   background: #ffffff;
 }
-.light article.win .terminal:not(.win32) .titlebar .titlebar-title::after {
+.win.light .terminal:not(.win32) .titlebar .titlebar-title::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -14 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
 }
-.light article.win .terminal:not(.win32) .titlebar .titlebar-extra::after {
+.win.light .terminal:not(.win32) .titlebar .titlebar-extra::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-6 0 L6 0M0-6L0 6" stroke-width="1" stroke="black"/></svg>');
 }
-.light article.win .terminal:not(.win32) .titlebar .button.btn-3:hover,
-.light article.win .terminal:not(.win32) .titlebar .button.btn-2:hover {
+.win.light .terminal:not(.win32) .titlebar .button.btn-3:hover,
+.win.light .terminal:not(.win32) .titlebar .button.btn-2:hover {
   background: #e0e0e0;
 }
-.light article.win .terminal:not(.win32) .titlebar .button.btn-1:hover {
+.win.light .terminal:not(.win32) .titlebar .button.btn-1:hover {
   background: #c42b1c;
 }
-.light article.win .terminal:not(.win32) .titlebar-extra {
+.win.light .terminal:not(.win32) .titlebar-extra {
   color: #000000;
 }
-.light article.win .terminal:not(.win32) .titlebar-extra:hover {
+.win.light .terminal:not(.win32) .titlebar-extra:hover {
   background: #dbdbdb;
 }
-article.win .terminal.win32 .titlebar {
+.win .terminal.win32 .titlebar {
   display: block;
   width: 100%;
   padding-left: 0.5em;
@@ -311,24 +311,24 @@ article.win .terminal.win32 .titlebar {
   color: white;
   height: 1.8em;
 }
-article.win .terminal.win32 .titlebar .titlebar-extra {
+.win .terminal.win32 .titlebar .titlebar-extra {
   display: none;
 }
-article.win .terminal.win32 .titlebar .titlebar-title {
+.win .terminal.win32 .titlebar .titlebar-title {
   display: inline-flex;
   width: calc(100% - 10em);
   vertical-align: middle;
   height: 100%;
   align-items: center;
 }
-article.win .terminal.win32 .titlebar .titlebar-title .titlebar-icon {
+.win .terminal.win32 .titlebar .titlebar-title .titlebar-icon {
   width: 1.5em;
   height: 1.5em;
   display: inline-block;
   vertical-align: middle;
   background: transparent url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="95.1" y1="91.8" x2="26.85" y2="30.82"><stop offset="0" stop-color="%235391fe"/><stop offset="1" stop-color="%233e6dbf"/></linearGradient><path fill="url(%23a)" d="M9.491 109c-1.62 0-3.021-.638-3.944-1.798-.944-1.185-1.268-2.814-.889-4.47l17.834-77.911C23.239 21.557 26.376 19 29.634 19H118.5c1.62 0 3.021.638 3.945 1.798.944 1.184 1.268 2.814.889 4.47L105.5 103.179c-.747 3.264-3.884 5.822-7.143 5.822H9.491z"/><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="26.2" y1="30" x2="93.75" y2="90.7"><stop offset="0" stop-color="%235391fe"/><stop offset="1" stop-color="%233e6dbf"/></linearGradient><path fill="url(%23b)" d="M29.634 20H118.5c2.769 0 4.496 2.259 3.858 5.045l-17.834 77.911c-.638 2.786-3.399 5.045-6.168 5.045H9.491c-2.769 0-4.496-2.258-3.858-5.045l17.834-77.911C24.104 22.259 26.866 20 29.634 20z"/><path fill="%232C5591" d="M64.165 87.558h21.613c2.513 0 4.55 2.125 4.55 4.746 0 2.621-2.037 4.747-4.55 4.747H64.165c-2.513 0-4.55-2.125-4.55-4.747 0-2.621 2.037-4.746 4.55-4.746zM78.184 66.455c-.372.749-1.144 1.575-2.509 2.534L35.562 97.798c-2.19 1.591-5.334 1.001-7.021-1.319-1.687-2.32-1.28-5.49.91-7.082l36.173-26.194v-.538L42.896 38.487c-1.854-1.972-1.661-5.161.431-7.124 2.092-1.962 5.29-1.954 7.144.018l27.271 29.012c1.548 1.647 1.663 4.141.442 6.062z"/><path fill="%23FFF" d="M77.184 65.455c-.372.749-1.144 1.575-2.509 2.534L34.562 96.798c-2.19 1.591-5.334 1.001-7.021-1.319-1.687-2.32-1.28-5.49.91-7.082l36.173-26.194v-.538L41.896 37.487c-1.854-1.972-1.661-5.161.431-7.124 2.092-1.962 5.29-1.954 7.144.018l27.271 29.012c1.548 1.647 1.663 4.141.442 6.062zM63.55 87h21.613c2.513 0 4.55 2.015 4.55 4.5s-2.037 4.5-4.55 4.5H63.55C61.037 96 59 93.985 59 91.5s2.037-4.5 4.55-4.5z"/></svg>') no-repeat center center;
 }
-article.win .terminal.win32 .titlebar .titlebar-title .titlebar-text {
+.win .terminal.win32 .titlebar .titlebar-title .titlebar-text {
   font-size: 0.8em;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -337,62 +337,30 @@ article.win .terminal.win32 .titlebar .titlebar-title .titlebar-text {
   flex: 1;
   display: inline-block;
 }
-article.win .terminal.win32 .titlebar .button {
+.win .terminal.win32 .titlebar .button {
   width: 2.8em;
   height: 100%;
 }
-article.win .terminal.win32 .titlebar .button::after {
+.win .terminal.win32 .titlebar .button::after {
   margin-top: -0.6em;
 }
-article.win .terminal.win32 .titlebar .button.btn-1:hover {
+.win .terminal.win32 .titlebar .button.btn-1:hover {
   background: #c42b1c;
 }
-article.win .terminal.win32 .titlebar .button.btn-3:hover,
-article.win .terminal.win32 .titlebar .button.btn-2:hover {
+.win .terminal.win32 .titlebar .button.btn-3:hover,
+.win .terminal.win32 .titlebar .button.btn-2:hover {
   background: #c5c5c5;
 }
-article.win .terminal.win32 .terminal-code {
+.win .terminal.win32 .terminal-code {
   font-size: 0.9rem !important;
 }
-.light article.win .terminal.win32 .titlebar {
+.light.win .terminal.win32 .titlebar {
   background: white;
   color: black;
 }
-article.mac .terminal .titlebar {
-  display: block;
-  text-align: center;
-  height: 1.5em;
-  width: 100%;
-  user-select: none;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-article.mac .terminal .titlebar .titlebar-title {
-  display: inline-flex;
-  width: calc(100% - 10em);
-  height: 100%;
-  vertical-align: top;
-  align-items: center;
-  justify-content: center;
-  margin-right: 4.3em;
-}
-article.mac .terminal .titlebar .titlebar-title .titlebar-text {
-  font-size: 0.8em;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  vertical-align: middle;
-}
-article.mac .terminal .titlebar .titlebar-title .titlebar-text::before {
+.mac .terminal .titlebar .titlebar-title .titlebar-text::before {
   content: "🏠 ";
 }
-article.mac .terminal .titlebar .titlebar-extra {
-  display: none;
-}
-article.mac .terminal .terminal-code {
+.mac .terminal .terminal-code {
   font-size: 0.9rem !important;
-}
-article.mac .terminal .titlebar {
-  background: linear-gradient(to top, #333333, #404040);
-  color: #aaaaaa;
 }

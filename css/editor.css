@@ -19,7 +19,7 @@
   resize: none;
   border: none;
 }
-article.win .editor .titlebar {
+.win .editor .titlebar {
   display: block;
   width: 100%;
   height: 2.5em;
@@ -28,14 +28,14 @@ article.win .editor .titlebar {
   overflow: hidden;
   box-sizing: border-box;
 }
-article.win .editor .titlebar::before {
+.win .editor .titlebar::before {
   width: 1em;
   height: 1em;
   float: left;
   margin: 0.75em;
   content: url('data:image/svg+xml;utf8,<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg"> <path d="M260 20a15 15 0 0 1 15 15v260a15 15 0 0 1 -15 15H60a15 15 0 0 1-15-15V35a15 15 0 0 1 15-15z" fill="url(%23a)"/><path d="M260 20a15 15 0 0 1 15 15v235a15 15 0 0 1 -15 15H60a15 15 0 0 1-15-15V35a15 15 0 0 1 15-15z" fill="url(%23b)"/><path d="M260 20a15 15 0 0 1 15 15v210a15 15 0 0 1 -15 15H60a15 15 0 0 1-15-15V35a15 15 0 0 1 15-15z" fill="url(%23c)"/><path d="M87 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-3a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z" fill="%23057093"/><path d="M137 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-4a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z" fill="%23057093"/><path d="M187 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-4a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z" fill="%23057093"/><path d="M237 1a11 11 0 0 1 11 11v18a11 11 0 0 1 -11 11h-4a11 11 0 0 1-11-11v-18a11 11 0 0 1 11-11z" fill="%23057093"/><path d="M232 84a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-144a5 5 0 0 1-5-5v-10a5 5 0 0 1 5-5z" fill="%23057093"/><path d="M232 135a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-144a5 5 0 0 1-5-5v-10a5 5 0 0 1 5-5z" fill="%23057093"/><path d="M232 186a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-144a5 5 0 0 1-5-5v-10a5 5 0 0 1 5-5z" fill="%23057093"/><defs> <linearGradient id="a" x1="0" y1="260" x2="0" y2="310" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="%23603008"/><stop offset="1" stop-color="%23ae560c"/></linearGradient> <linearGradient id="b" x1="0" y1="245" x2="0" y2="295" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="%23949494"/><stop offset="1" stop-color="%23ffffff"/></linearGradient> <linearGradient id="c" x1="45" y1="20" x2="275" y2="260" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="%237ed9f4"/><stop offset="1" stop-color="%2341aecd"/></linearGradient> </defs> </svg>');
 }
-article.win .editor .titlebar .titlebar-title {
+.win .editor .titlebar .titlebar-title {
   width: 30%;
   max-width: 20em;
   min-width: 15em;
@@ -47,10 +47,10 @@ article.win .editor .titlebar .titlebar-title {
   align-items: center;
   vertical-align: top;
 }
-article.win .editor .titlebar .titlebar-title .titlebar-icon {
+.win .editor .titlebar .titlebar-title .titlebar-icon {
   display: none;
 }
-article.win .editor .titlebar .titlebar-title .titlebar-text {
+.win .editor .titlebar .titlebar-title .titlebar-text {
   font-size: 0.7em;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -58,26 +58,26 @@ article.win .editor .titlebar .titlebar-title .titlebar-text {
   line-height: 2em;
   flex: 1;
 }
-article.win .editor .titlebar .titlebar-title::after {
+.win .editor .titlebar .titlebar-title::after {
   float: right;
   width: 2em;
   height: 2em;
 }
-article.win .editor .titlebar .titlebar-extra {
+.win .editor .titlebar .titlebar-extra {
   width: 1.9em;
   height: 1.9em;
   display: inline-block;
   border-radius: 0.2em;
   margin: 0.42em 0.2em 0 0.2em;
 }
-article.win .editor .titlebar .button {
+.win .editor .titlebar .button {
   width: 2.8em;
   height: 1.8em;
 }
-article.win .editor .titlebar .button::after {
+.win .editor .titlebar .button::after {
   margin-top: -0.5em;
 }
-article.win .editor .toolbar {
+.win .editor .toolbar {
   display: flex;
   align-items: center;
   width: 100%;
@@ -87,7 +87,7 @@ article.win .editor .toolbar {
   overflow: hidden;
   box-sizing: border-box;
 }
-article.win .editor .toolbar .menu {
+.win .editor .toolbar .menu {
   font-size: 0.9em;
   padding: 0.4em 0.8em;
   height: 2em;
@@ -97,125 +97,81 @@ article.win .editor .toolbar .menu {
   border-radius: 0.3em;
   transition: background 0.3s;
 }
-article.win .editor .toolbar .menu-1::before {
+.win .editor .toolbar .menu-1::before {
   content: "文件";
 }
-article.win .editor .toolbar .menu-2::before {
+.win .editor .toolbar .menu-2::before {
   content: "编辑";
 }
-article.win .editor .toolbar .menu-3::before {
+.win .editor .toolbar .menu-3::before {
   content: "查看";
 }
-article.win .editor .titlebar {
+.win .editor .titlebar {
   background: #202020;
   color: white;
 }
-article.win .editor .titlebar .titlebar-title {
+.win .editor .titlebar .titlebar-title {
   background: #2c2c2c;
 }
-article.win .editor .titlebar .titlebar-title::after {
+.win .editor .titlebar .titlebar-title::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -14 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
 }
-article.win .editor .titlebar .button.btn-3:hover,
-article.win .editor .titlebar .button.btn-2:hover {
+.win .editor .titlebar .button.btn-3:hover,
+.win .editor .titlebar .button.btn-2:hover {
   background: #626262;
 }
-article.win .editor .titlebar .button.btn-1:hover {
+.win .editor .titlebar .button.btn-1:hover {
   background: #e81123;
 }
-article.win .editor .titlebar .titlebar-extra:hover {
+.win .editor .titlebar .titlebar-extra:hover {
   background: #2d2d2d;
 }
-article.win .editor .titlebar .titlebar-extra::after {
+.win .editor .titlebar .titlebar-extra::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-6 0 L6 0M0-6L0 6" stroke-width="1" stroke="white"/></svg>');
 }
-article.win .editor .toolbar {
+.win .editor .toolbar {
   color: white;
   background: #2c2c2c;
 }
-article.win .editor .toolbar .menu:hover {
+.win .editor .toolbar .menu:hover {
   background: #383838;
 }
-article.win .editor .editor-text {
+.win .editor .editor-text {
   background: #272727;
   color: white;
 }
-.light article.win .editor .titlebar {
+.light.win .editor .titlebar {
   background: #e8e8e8;
   color: #1a1a1a;
 }
-.light article.win .editor .titlebar .titlebar-title {
+.light.win .editor .titlebar .titlebar-title {
   background: #f8f8f8;
 }
-.light article.win .editor .titlebar .titlebar-extra:hover {
+.light.win .editor .titlebar .titlebar-extra:hover {
   background: #e0e0e0;
 }
-.light article.win .editor .titlebar .titlebar-extra::after {
+.light.win .editor .titlebar .titlebar-extra::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-7 0 L7 0M0-7L0 7" stroke-width="1" stroke="black"/></svg>');
 }
-.light article.win .editor .titlebar .button.btn-3:hover,
-.light article.win .editor .titlebar .button.btn-2:hover {
+.light.win .editor .titlebar .button.btn-3:hover,
+.light.win .editor .titlebar .button.btn-2:hover {
   background: #dfdfdf;
 }
-.light article.win .editor .titlebar .button.btn-1:hover {
+.light.win .editor .titlebar .button.btn-1:hover {
   background: #e81123;
 }
-.light article.win .editor .toolbar {
+.light.win .editor .toolbar {
   color: black;
   background: #f8f8f8;
   border-bottom: #eaeaea 1px solid;
 }
-.light article.win .editor .toolbar .menu:hover {
+.light.win .editor .toolbar .menu:hover {
   background: #e0e0e0;
 }
-.light article.win .editor .editor-text {
+.light.win .editor .editor-text {
   color: black;
   background: #f9f9f9;
 }
-article.mac .editor .titlebar {
-  display: block;
-  background: #cccccc;
-  color: #595959;
-  width: 100%;
-  user-select: none;
-  box-sizing: border-box;
-  height: 1.5em;
-  text-align: center;
-}
-article.mac .editor .titlebar .titlebar-title {
-  display: inline-flex;
-  width: calc(100% - 10em);
-  height: 100%;
-  vertical-align: top;
-  align-items: center;
-  justify-content: center;
-  margin-right: 4.3em;
-}
-article.mac .editor .titlebar .titlebar-title .titlebar-text {
-  font-size: 0.8em;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  vertical-align: middle;
-}
-article.mac .editor .titlebar .titlebar-extra {
-  display: none;
-}
-article.mac .editor .titlebar .button {
-  float: left;
-  margin: 0.15em 0.05em;
-  width: 1.2em;
-  height: 1.2em;
-  display: inline-flex;
-}
-article.mac .editor .titlebar .button::after {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-article.mac .editor .toolbar {
-  display: none;
-}
-article.mac .editor .editor-body .editor-text {
+.mac .editor .editor-body .editor-text {
   padding: 8px;
 }

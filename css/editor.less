@@ -26,7 +26,7 @@
     }
 }
 
-article.win {
+.win {
     .editor {
         .titlebar {
             display: block;
@@ -132,7 +132,7 @@ article.win {
 }
 
 
-article.win {
+.win {
     .editor {
         .titlebar {
             background: #202020;
@@ -185,115 +185,61 @@ article.win {
     }
 }
 
-.light {
-
-    article.win {
-        .editor {
-            .titlebar {
-                background: #e8e8e8;
-                color: #1a1a1a;
-
-                .titlebar-title {
-                    background: #f8f8f8;
-                }
-
-                .titlebar-extra {
-                    &:hover {
-                        background: #e0e0e0;
-                    }
-
-                    &::after {
-                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-7 0 L7 0M0-7L0 7" stroke-width="1" stroke="black"/></svg>');
-                    }
-                }
-
-                .button {
-
-                    &.btn-3:hover,
-                    &.btn-2:hover {
-                        background: #dfdfdf;
-                    }
-
-                    &.btn-1:hover {
-                        background: #e81123;
-                    }
-                }
-            }
-
-            .toolbar {
-                color: black;
-                background: #f8f8f8;
-                border-bottom: #eaeaea 1px solid;
-
-                .menu:hover {
-                    background: #e0e0e0;
-                }
-            }
-
-            .editor-text {
-                color: black;
-                background: #f9f9f9;
-            }
-        }
-    }
-}
-
-
-article.mac {
+.light.win {
     .editor {
         .titlebar {
-            display: block;
-            background: #cccccc;
-            color: #595959;
-            width: 100%;
-            user-select: none;
-            box-sizing: border-box;
-            height: 1.5em;
-            text-align: center;
+            background: #e8e8e8;
+            color: #1a1a1a;
 
             .titlebar-title {
-                display: inline-flex;
-                width: calc(100% - 10em);
-                height: 100%;
-                vertical-align: top;
-                align-items: center;
-                justify-content: center;
-                margin-right: 4.3em;
-
-                .titlebar-text {
-                    font-size: 0.8em;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    vertical-align: middle;
-                }
+                background: #f8f8f8;
             }
 
             .titlebar-extra {
-                display: none;
+                &:hover {
+                    background: #e0e0e0;
+                }
+
+                &::after {
+                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-7 0 L7 0M0-7L0 7" stroke-width="1" stroke="black"/></svg>');
+                }
             }
 
             .button {
-                float: left;
-                margin: 0.15em 0.05em;
-                width: 1.2em;
-                height: 1.2em;
-                display: inline-flex;
 
-                &::after {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
+                &.btn-3:hover,
+                &.btn-2:hover {
+                    background: #dfdfdf;
+                }
+
+                &.btn-1:hover {
+                    background: #e81123;
                 }
             }
         }
 
         .toolbar {
-            display: none;
+            color: black;
+            background: #f8f8f8;
+            border-bottom: #eaeaea 1px solid;
+
+            .menu:hover {
+                background: #e0e0e0;
+            }
         }
 
-        .editor-body{
-            .editor-text{
+        .editor-text {
+            color: black;
+            background: #f9f9f9;
+        }
+    }
+}
+
+
+.mac {
+    .editor {
+        .editor-body {
+            .editor-text {
                 padding: 8px;
             }
         }

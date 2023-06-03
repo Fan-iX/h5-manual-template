@@ -26,11 +26,13 @@
         font-size: 1rem !important;
         box-sizing: border-box;
         overflow: auto;
-        .ps1{
+
+        .ps1 {
             user-select: none;
         }
-        details[open]{
-            .ps1{
+
+        details[open] {
+            .ps1 {
                 user-select: auto;
             }
         }
@@ -128,7 +130,7 @@
     }
 }
 
-article.mac {
+.mac {
     .terminal {
         --tc-foreground: #f0f0f0;
         --tc-background: #1b1b1b;
@@ -136,7 +138,7 @@ article.mac {
 }
 
 
-article.win {
+.win {
     .terminal.win32 {
         --tc-foreground: #eeedf0;
         --tc-background: #012456;
@@ -241,7 +243,7 @@ article.win {
     }
 }
 
-article.win {
+.win {
     .terminal:not(.win32) {
         .titlebar {
             display: block;
@@ -308,7 +310,7 @@ article.win {
     }
 }
 
-article.win {
+.win {
     .terminal:not(.win32) {
         .titlebar {
             background: #333333;
@@ -349,10 +351,8 @@ article.win {
         }
     }
 
-}
 
-.light {
-    article.win {
+    &.light {
         .terminal:not(.win32) {
             .titlebar {
                 background: #e8e8e8;
@@ -394,7 +394,7 @@ article.win {
     }
 }
 
-article.win {
+.win {
     .terminal.win32 {
         .titlebar {
             display: block;
@@ -462,67 +462,27 @@ article.win {
     }
 }
 
-.light {
-    article.win {
-        .terminal.win32 {
-            .titlebar {
-                background: white;
-                color: black;
-            }
+.light.win {
+    .terminal.win32 {
+        .titlebar {
+            background: white;
+            color: black;
         }
     }
 }
 
-article.mac {
+.mac {
     .terminal {
         .titlebar {
-            display: block;
-            text-align: center;
-            height: 1.5em;
-            width: 100%;
-            user-select: none;
-            overflow: hidden;
-            box-sizing: border-box;
-
             .titlebar-title {
-                display: inline-flex;
-                width: calc(100% - 10em);
-                height: 100%;
-                vertical-align: top;
-                align-items: center;
-                justify-content: center;
-                margin-right: 4.3em;
-
-                .titlebar-text {
-                    font-size: 0.8em;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    vertical-align: middle;
-
-                    &::before {
-                        content: "🏠 ";
-                    }
+                .titlebar-text::before {
+                    content: "🏠 ";
                 }
-            }
-
-            .titlebar-extra {
-                display: none;
             }
         }
 
         .terminal-code {
             font-size: 0.9rem !important;
-        }
-    }
-}
-
-
-article.mac {
-    .terminal {
-        .titlebar {
-            background: linear-gradient(to top, #333333, #404040);
-            color: #aaaaaa;
         }
     }
 }

@@ -4,111 +4,180 @@
 .terminal {
   border: 1px gray solid;
 }
-article.win .browser .titlebar .button,
-article.win .slide .titlebar .button,
-article.win .editor .titlebar .button,
-article.win .terminal .titlebar .button {
+.browser .titlebar,
+.slide .titlebar,
+.editor .titlebar,
+.terminal .titlebar {
+  display: none;
+}
+.browser .toolbar,
+.slide .toolbar,
+.editor .toolbar,
+.terminal .toolbar {
+  display: none;
+}
+.win .browser .titlebar,
+.win .slide .titlebar,
+.win .editor .titlebar,
+.win .terminal .titlebar {
+  display: block;
+  user-select: none;
+  box-sizing: border-box;
+}
+.win .browser .titlebar .button,
+.win .slide .titlebar .button,
+.win .editor .titlebar .button,
+.win .terminal .titlebar .button {
   float: right;
   width: 3em;
   display: inline-flex;
 }
-article.win .browser .titlebar .button::after,
-article.win .slide .titlebar .button::after,
-article.win .editor .titlebar .button::after,
-article.win .terminal .titlebar .button::after {
+.win .browser .titlebar .button::after,
+.win .slide .titlebar .button::after,
+.win .editor .titlebar .button::after,
+.win .terminal .titlebar .button::after {
   width: 100%;
 }
-article.win .browser .titlebar .button.btn-2,
-article.win .slide .titlebar .button.btn-2,
-article.win .editor .titlebar .button.btn-2,
-article.win .terminal .titlebar .button.btn-2,
-article.win .browser .titlebar .button.btn-3,
-article.win .slide .titlebar .button.btn-3,
-article.win .editor .titlebar .button.btn-3,
-article.win .terminal .titlebar .button.btn-3 {
+.win .browser .titlebar .button.btn-2,
+.win .slide .titlebar .button.btn-2,
+.win .editor .titlebar .button.btn-2,
+.win .terminal .titlebar .button.btn-2,
+.win .browser .titlebar .button.btn-3,
+.win .slide .titlebar .button.btn-3,
+.win .editor .titlebar .button.btn-3,
+.win .terminal .titlebar .button.btn-3 {
   transition: background 0.2s;
 }
-article.win .browser .titlebar .button.btn-3::after,
-article.win .slide .titlebar .button.btn-3::after,
-article.win .editor .titlebar .button.btn-3::after,
-article.win .terminal .titlebar .button.btn-3::after {
+.win .browser .titlebar .button.btn-3::after,
+.win .slide .titlebar .button.btn-3::after,
+.win .editor .titlebar .button.btn-3::after,
+.win .terminal .titlebar .button.btn-3::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-5 0 L5 0" stroke-width="1" stroke="white"/></svg>');
 }
-article.win .browser .titlebar .button.btn-2::after,
-article.win .slide .titlebar .button.btn-2::after,
-article.win .editor .titlebar .button.btn-2::after,
-article.win .terminal .titlebar .button.btn-2::after {
+.win .browser .titlebar .button.btn-2::after,
+.win .slide .titlebar .button.btn-2::after,
+.win .editor .titlebar .button.btn-2::after,
+.win .terminal .titlebar .button.btn-2::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="white"/></svg>');
 }
-article.win .browser .titlebar .button.btn-1::after,
-article.win .slide .titlebar .button.btn-1::after,
-article.win .editor .titlebar .button.btn-1::after,
-article.win .terminal .titlebar .button.btn-1::after {
+.win .browser .titlebar .button.btn-1::after,
+.win .slide .titlebar .button.btn-1::after,
+.win .editor .titlebar .button.btn-1::after,
+.win .terminal .titlebar .button.btn-1::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
 }
-.light article.win .browser .titlebar .button.btn-3::after,
-.light article.win .slide .titlebar .button.btn-3::after,
-.light article.win .editor .titlebar .button.btn-3::after,
-.light article.win .terminal .titlebar .button.btn-3::after {
+.light.win .browser .titlebar .button.btn-3::after,
+.light.win .slide .titlebar .button.btn-3::after,
+.light.win .editor .titlebar .button.btn-3::after,
+.light.win .terminal .titlebar .button.btn-3::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-5 0 L5 0" stroke-width="1" stroke="black"/></svg>');
 }
-.light article.win .browser .titlebar .button.btn-2::after,
-.light article.win .slide .titlebar .button.btn-2::after,
-.light article.win .editor .titlebar .button.btn-2::after,
-.light article.win .terminal .titlebar .button.btn-2::after {
+.light.win .browser .titlebar .button.btn-2::after,
+.light.win .slide .titlebar .button.btn-2::after,
+.light.win .editor .titlebar .button.btn-2::after,
+.light.win .terminal .titlebar .button.btn-2::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="black"/></svg>');
 }
-.light article.win .browser .titlebar .button.btn-1::after,
-.light article.win .slide .titlebar .button.btn-1::after,
-.light article.win .editor .titlebar .button.btn-1::after,
-.light article.win .terminal .titlebar .button.btn-1::after {
+.light.win .browser .titlebar .button.btn-1::after,
+.light.win .slide .titlebar .button.btn-1::after,
+.light.win .editor .titlebar .button.btn-1::after,
+.light.win .terminal .titlebar .button.btn-1::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
 }
-.light article.win .browser .titlebar .button.btn-1:hover::after,
-.light article.win .slide .titlebar .button.btn-1:hover::after,
-.light article.win .editor .titlebar .button.btn-1:hover::after,
-.light article.win .terminal .titlebar .button.btn-1:hover::after {
+.light.win .browser .titlebar .button.btn-1:hover::after,
+.light.win .slide .titlebar .button.btn-1:hover::after,
+.light.win .editor .titlebar .button.btn-1:hover::after,
+.light.win .terminal .titlebar .button.btn-1:hover::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
 }
-article.mac .browser .titlebar,
-article.mac .slide .titlebar,
-article.mac .editor .titlebar,
-article.mac .terminal .titlebar {
+.mac .browser .titlebar,
+.mac .slide .titlebar,
+.mac .editor .titlebar,
+.mac .terminal .titlebar {
+  overflow: hidden;
+  text-align: center;
+  user-select: none;
+  display: block;
   padding-left: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+  height: 1.5em;
 }
-article.mac .browser .titlebar .button,
-article.mac .slide .titlebar .button,
-article.mac .editor .titlebar .button,
-article.mac .terminal .titlebar .button {
+.mac .browser .titlebar .button,
+.mac .slide .titlebar .button,
+.mac .editor .titlebar .button,
+.mac .terminal .titlebar .button {
   float: left;
   margin: 0.15em 0.05em;
   width: 1.2em;
   height: 1.2em;
   display: inline-flex;
 }
-article.mac .browser .titlebar .button::after,
-article.mac .slide .titlebar .button::after,
-article.mac .editor .titlebar .button::after,
-article.mac .terminal .titlebar .button::after {
+.mac .browser .titlebar .button::after,
+.mac .slide .titlebar .button::after,
+.mac .editor .titlebar .button::after,
+.mac .terminal .titlebar .button::after {
   display: block;
   width: 100%;
   height: 100%;
 }
-article.mac .browser .titlebar .button.btn-1::after,
-article.mac .slide .titlebar .button.btn-1::after,
-article.mac .editor .titlebar .button.btn-1::after,
-article.mac .terminal .titlebar .button.btn-1::after {
+.mac .browser .titlebar .button.btn-1::after,
+.mac .slide .titlebar .button.btn-1::after,
+.mac .editor .titlebar .button.btn-1::after,
+.mac .terminal .titlebar .button.btn-1::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="3.5" cx="5" cy="5" fill="%23fa625c"/></svg>');
 }
-article.mac .browser .titlebar .button.btn-2::after,
-article.mac .slide .titlebar .button.btn-2::after,
-article.mac .editor .titlebar .button.btn-2::after,
-article.mac .terminal .titlebar .button.btn-2::after {
+.mac .browser .titlebar .button.btn-2::after,
+.mac .slide .titlebar .button.btn-2::after,
+.mac .editor .titlebar .button.btn-2::after,
+.mac .terminal .titlebar .button.btn-2::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="3.5" cx="5" cy="5" fill="%23fbb43a"/></svg>');
 }
-article.mac .browser .titlebar .button.btn-3::after,
-article.mac .slide .titlebar .button.btn-3::after,
-article.mac .editor .titlebar .button.btn-3::after,
-article.mac .terminal .titlebar .button.btn-3::after {
+.mac .browser .titlebar .button.btn-3::after,
+.mac .slide .titlebar .button.btn-3::after,
+.mac .editor .titlebar .button.btn-3::after,
+.mac .terminal .titlebar .button.btn-3::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="3.5" cx="5" cy="5" fill="%233ec544"/></svg>');
+}
+.mac .browser .titlebar .titlebar-title,
+.mac .slide .titlebar .titlebar-title,
+.mac .editor .titlebar .titlebar-title,
+.mac .terminal .titlebar .titlebar-title {
+  display: inline-flex;
+  width: calc(100% - 10em);
+  height: 100%;
+  vertical-align: top;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4.3em;
+}
+.mac .browser .titlebar .titlebar-title .titlebar-text,
+.mac .slide .titlebar .titlebar-title .titlebar-text,
+.mac .editor .titlebar .titlebar-title .titlebar-text,
+.mac .terminal .titlebar .titlebar-title .titlebar-text {
+  font-size: 0.8em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.mac .browser .titlebar .titlebar-extra,
+.mac .slide .titlebar .titlebar-extra,
+.mac .editor .titlebar .titlebar-extra,
+.mac .terminal .titlebar .titlebar-extra {
+  display: none;
+}
+.mac .browser .titlebar,
+.mac .slide .titlebar,
+.mac .editor .titlebar,
+.mac .terminal .titlebar {
+  background: linear-gradient(to top, #333333, #404040);
+  color: #aaaaaa;
+}
+.light.mac .browser .titlebar,
+.light.mac .slide .titlebar,
+.light.mac .editor .titlebar,
+.light.mac .terminal .titlebar {
+  background: #cccccc;
+  color: #595959;
 }

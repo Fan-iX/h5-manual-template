@@ -1,5 +1,4 @@
 .browser .body {
-  background: #fff;
   height: 30em;
   width: 100%;
   overflow-y: scroll;
@@ -13,7 +12,7 @@
   width: 100%;
   box-sizing: border-box;
 }
-article.win .browser .titlebar {
+.win .browser .titlebar {
   display: block;
   width: 100%;
   height: 2.5em;
@@ -22,7 +21,7 @@ article.win .browser .titlebar {
   overflow: hidden;
   box-sizing: border-box;
 }
-article.win .browser .titlebar .titlebar-title {
+.win .browser .titlebar .titlebar-title {
   width: 30%;
   max-width: 20em;
   min-width: 15em;
@@ -33,12 +32,12 @@ article.win .browser .titlebar .titlebar-title {
   margin-top: 0.5em;
   align-items: center;
 }
-article.win .browser .titlebar .titlebar-title .titlebar-icon {
+.win .browser .titlebar .titlebar-title .titlebar-icon {
   width: 1.2em;
   height: 1.2em;
   margin: 0 0.25em;
 }
-article.win .browser .titlebar .titlebar-title .titlebar-text {
+.win .browser .titlebar .titlebar-title .titlebar-text {
   font-size: 0.9em;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -46,12 +45,12 @@ article.win .browser .titlebar .titlebar-title .titlebar-text {
   line-height: 2em;
   flex: 1;
 }
-article.win .browser .titlebar .titlebar-title::after {
+.win .browser .titlebar .titlebar-title::after {
   float: right;
   width: 2em;
   height: 2em;
 }
-article.win .browser .titlebar .titlebar-extra {
+.win .browser .titlebar .titlebar-extra {
   width: 1.9em;
   height: 1.9em;
   display: inline-block;
@@ -59,13 +58,13 @@ article.win .browser .titlebar .titlebar-extra {
   margin-top: 0.42em;
   vertical-align: top;
 }
-article.win .browser .titlebar .button {
+.win .browser .titlebar .button {
   height: 2.5em;
 }
-article.win .browser .titlebar .button::after {
+.win .browser .titlebar .button::after {
   margin-top: -0.25em;
 }
-article.win .browser .toolbar {
+.win .browser .toolbar {
   display: flex;
   align-items: center;
   width: 100%;
@@ -75,12 +74,12 @@ article.win .browser .toolbar {
   overflow: hidden;
   box-sizing: border-box;
 }
-article.win .browser .toolbar .button {
+.win .browser .toolbar .button {
   aspect-ratio: 1;
   height: 100%;
   transition: background 0.3s;
 }
-article.win .browser .toolbar .address {
+.win .browser .toolbar .address {
   border: none;
   flex: 1;
   height: 2.5em;
@@ -89,129 +88,125 @@ article.win .browser .toolbar .address {
   padding: 0.2em 0.8em;
   box-sizing: border-box;
 }
-article.win .browser .toolbar .address:focus,
-article.win .browser .toolbar .address:hover {
+.win .browser .toolbar .address:focus,
+.win .browser .toolbar .address:hover {
   outline: 1px solid;
   outline-offset: -1px;
 }
-article.win .browser .titlebar {
+.win .browser .titlebar {
   background: #202020;
   color: white;
 }
-article.win .browser .titlebar .titlebar-title {
+.win .browser .titlebar .titlebar-title {
   background: #3b3b3b;
 }
-article.win .browser .titlebar .titlebar-title::after {
+.win .browser .titlebar .titlebar-title::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -14 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
 }
-article.win .browser .titlebar .titlebar-title .titlebar-icon:empty::after {
+.win .browser .titlebar .titlebar-title .titlebar-icon:empty::after {
   content: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M24 10V25a2 2 0 0 1 -2 2h-14a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9zh-7v-7" fill="none" stroke="white" stroke-width="1.5"/></svg>');
 }
-article.win .browser .titlebar .button.btn-3:hover,
-article.win .browser .titlebar .button.btn-2:hover {
+.win .browser .titlebar .button.btn-3:hover,
+.win .browser .titlebar .button.btn-2:hover {
   background: #626262;
 }
-article.win .browser .titlebar .button.btn-1:hover {
+.win .browser .titlebar .button.btn-1:hover {
   background: #e81123;
 }
-article.win .browser .titlebar .titlebar-extra:hover {
+.win .browser .titlebar .titlebar-extra:hover {
   background: #434343;
 }
-article.win .browser .titlebar .titlebar-extra::after {
+.win .browser .titlebar .titlebar-extra::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-7 0 L7 0M0-7L0 7" stroke-width="1" stroke="white"/></svg>');
 }
-article.win .browser .toolbar {
+.win .browser .toolbar {
   color: white;
   background: #3b3b3b;
 }
-article.win .browser .toolbar .button:hover {
+.win .browser .toolbar .button:hover {
   background: #4a4a4a;
 }
-article.win .browser .toolbar .button.backward::after {
+.win .browser .toolbar .button.backward::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-6 0 L0 -6M-6 0L0 6M-6 0 L7 0" stroke-width="1" stroke="white" stroke-linecap="round"/></svg>');
 }
-article.win .browser .toolbar .button.foreward::after {
+.win .browser .toolbar .button.foreward::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 L0 -6M6 0L0 6M6 0 L-7 0" stroke-width="1" stroke="white" stroke-linecap="round"/></svg>');
 }
-article.win .browser .toolbar .button.refresh::after {
+.win .browser .toolbar .button.refresh::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 A6 6 1 1 1 5.2 -3M5.2 -3h-4M5.2 -3v-4" fill="none" stroke-width="1" stroke="white" stroke-linecap="round"/></svg>');
 }
-article.win .browser .toolbar .button.setting::after {
+.win .browser .toolbar .button.setting::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><g fill="white"><circle r="1"/><circle cx="6" r="1"/><circle cx="-6" r="1"/></g></svg>');
 }
-article.win .browser .toolbar .address {
+.win .browser .toolbar .address {
   background: #2b2b2b;
   color: white;
 }
-article.win .browser .toolbar .address:focus,
-article.win .browser .toolbar .address:hover {
+.win .browser .toolbar .address:focus,
+.win .browser .toolbar .address:hover {
   outline-color: #656565;
 }
-.light article.win .browser .titlebar {
+.win.light .browser .titlebar {
   background: #cdcdcd;
   color: black;
 }
-.light article.win .browser .titlebar .titlebar-title {
+.win.light .browser .titlebar .titlebar-title {
   background: #f7f7f7;
 }
-.light article.win .browser .titlebar .titlebar-title::after {
+.win.light .browser .titlebar .titlebar-title::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -14 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
 }
-.light article.win .browser .titlebar .titlebar-title .titlebar-icon:empty::after {
+.win.light .browser .titlebar .titlebar-title .titlebar-icon:empty::after {
   content: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M24 10V25a2 2 0 0 1 -2 2h-14a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9zh-7v-7" fill="none" stroke="black" stroke-width="1.5"/></svg>');
 }
-.light article.win .browser .titlebar .button.btn-3:hover,
-.light article.win .browser .titlebar .button.btn-2:hover {
+.win.light .browser .titlebar .button.btn-3:hover,
+.win.light .browser .titlebar .button.btn-2:hover {
   background: #dedede;
 }
-.light article.win .browser .titlebar .button.btn-1:hover {
+.win.light .browser .titlebar .button.btn-1:hover {
   background: #e81123;
 }
-.light article.win .browser .titlebar .button.btn-1:hover::after {
+.win.light .browser .titlebar .button.btn-1:hover::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
 }
-.light article.win .browser .titlebar .titlebar-extra:hover {
+.win.light .browser .titlebar .titlebar-extra:hover {
   background: #adadad;
 }
-.light article.win .browser .titlebar .titlebar-extra::after {
+.win.light .browser .titlebar .titlebar-extra::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-7 0 L7 0M0-7L0 7" stroke-width="1" stroke="black"/></svg>');
 }
-.light article.win .browser .toolbar {
+.win.light .browser .toolbar {
   color: black;
   background: #f7f7f7;
 }
-.light article.win .browser .toolbar .button:hover {
+.win.light .browser .toolbar .button:hover {
   background: #e4e4e4;
 }
-.light article.win .browser .toolbar .button.backward::after {
+.win.light .browser .toolbar .button.backward::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-6 0 L0 -6M-6 0L0 6M-6 0 L7 0" stroke-width="1" stroke="black" stroke-linecap="round"/></svg>');
 }
-.light article.win .browser .toolbar .button.foreward::after {
+.win.light .browser .toolbar .button.foreward::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 L0 -6M6 0L0 6M6 0 L-7 0" stroke-width="1" stroke="black" stroke-linecap="round"/></svg>');
 }
-.light article.win .browser .toolbar .button.refresh::after {
+.win.light .browser .toolbar .button.refresh::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 A6 6 1 1 1 5.2 -3M5.2 -3h-4M5.2 -3v-4" fill="none" stroke-width="1" stroke="black" stroke-linecap="round"/></svg>');
 }
-.light article.win .browser .toolbar .button.setting::after {
+.win.light .browser .toolbar .button.setting::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><g fill="black"><circle r="1"/><circle cx="6" r="1"/><circle cx="-6" r="1"/></g></svg>');
 }
-.light article.win .browser .toolbar .address {
+.win.light .browser .toolbar .address {
   background: #ffffff;
   color: black;
 }
-.light article.win .browser .toolbar .address:focus,
-.light article.win .browser .toolbar .address:hover {
+.win.light .browser .toolbar .address:focus,
+.win.light .browser .toolbar .address:hover {
   outline-color: #cccccc;
 }
-article.mac .browser .titlebar {
-  display: block;
-  width: 100%;
+.mac .browser .titlebar {
   height: 2.2em;
-  user-select: none;
-  overflow: hidden;
-  box-sizing: border-box;
+  text-align: start;
 }
-article.mac .browser .titlebar .titlebar-title {
+.mac .browser .titlebar .titlebar-title {
   width: 30%;
   max-width: 20em;
   min-width: 15em;
@@ -220,27 +215,25 @@ article.mac .browser .titlebar .titlebar-title {
   display: inline-flex;
   height: calc(100% - 0.3em);
   margin-top: 0.3em;
+  margin-right: 0;
   align-items: center;
 }
-article.mac .browser .titlebar .titlebar-title .titlebar-icon {
+.mac .browser .titlebar .titlebar-title .titlebar-icon {
   width: 1.2em;
   height: 1.2em;
   margin: 0 0.25em;
 }
-article.mac .browser .titlebar .titlebar-title .titlebar-text {
+.mac .browser .titlebar .titlebar-title .titlebar-text {
   font-size: 0.9em;
   text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  line-height: 2em;
   flex: 1;
 }
-article.mac .browser .titlebar .titlebar-title::after {
+.mac .browser .titlebar .titlebar-title::after {
   float: right;
   width: 2em;
   height: 2em;
 }
-article.mac .browser .titlebar .titlebar-extra {
+.mac .browser .titlebar .titlebar-extra {
   width: 1.6em;
   height: 1.6em;
   display: inline-block;
@@ -248,16 +241,16 @@ article.mac .browser .titlebar .titlebar-extra {
   margin-top: 0.42em;
   vertical-align: top;
 }
-article.mac .browser .titlebar .button {
+.mac .browser .titlebar .button {
   height: 2.5em;
 }
-article.mac .browser .titlebar .button::after {
+.mac .browser .titlebar .button::after {
   margin-top: 0.5em;
 }
-article.mac .browser .titlebar .button.btn-3 {
+.mac .browser .titlebar .button.btn-3 {
   margin-right: 0.5em;
 }
-article.mac .browser .toolbar {
+.mac .browser .toolbar {
   display: flex;
   align-items: center;
   width: 100%;
@@ -267,13 +260,13 @@ article.mac .browser .toolbar {
   overflow: hidden;
   box-sizing: border-box;
 }
-article.mac .browser .toolbar .button {
+.mac .browser .toolbar .button {
   aspect-ratio: 1;
   height: 1.6em;
   border-radius: 1em;
   transition: background 0.3s;
 }
-article.mac .browser .toolbar .address {
+.mac .browser .toolbar .address {
   border: none;
   flex: 1;
   height: 1.8em;
@@ -283,100 +276,100 @@ article.mac .browser .toolbar .address {
   box-sizing: border-box;
   margin: 0.2em;
 }
-article.mac .browser .toolbar .address:focus,
-article.mac .browser .toolbar .address:hover {
+.mac .browser .toolbar .address:focus,
+.mac .browser .toolbar .address:hover {
   outline: 1px solid;
   outline-offset: -1px;
 }
-article.mac .browser .titlebar {
+.mac .browser .titlebar {
   background: #202020;
   color: white;
 }
-article.mac .browser .titlebar .titlebar-title {
+.mac .browser .titlebar .titlebar-title {
   background: #3b3b3b;
 }
-article.mac .browser .titlebar .titlebar-title .titlebar-icon:empty::after {
+.mac .browser .titlebar .titlebar-title .titlebar-icon:empty::after {
   content: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M24 10V25a2 2 0 0 1 -2 2h-14a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9zh-7v-7" fill="none" stroke="white" stroke-width="1.5"/></svg>');
 }
-article.mac .browser .titlebar .titlebar-title::after {
+.mac .browser .titlebar .titlebar-title::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -14 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
 }
-article.mac .browser .titlebar .titlebar-extra:hover {
+.mac .browser .titlebar .titlebar-extra:hover {
   background: #434343;
 }
-article.mac .browser .titlebar .titlebar-extra::after {
+.mac .browser .titlebar .titlebar-extra::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-7 0 L7 0M0-7L0 7" stroke-width="1" stroke="white"/></svg>');
 }
-article.mac .browser .toolbar {
+.mac .browser .toolbar {
   color: white;
   background: #3b3b3b;
 }
-article.mac .browser .toolbar .button:hover {
+.mac .browser .toolbar .button:hover {
   background: #4a4a4a;
 }
-article.mac .browser .toolbar .button.backward::after {
+.mac .browser .toolbar .button.backward::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-6 0 L0 -6M-6 0L0 6M-6 0 L7 0" stroke-width="1.5" stroke="white" stroke-linecap="round"/></svg>');
 }
-article.mac .browser .toolbar .button.foreward::after {
+.mac .browser .toolbar .button.foreward::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 L0 -6M6 0L0 6M6 0 L-7 0" stroke-width="1.5" stroke="white" stroke-linecap="round"/></svg>');
 }
-article.mac .browser .toolbar .button.refresh::after {
+.mac .browser .toolbar .button.refresh::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 A6 6 1 1 1 5.2 -3M5.2 -3h-4M5.2 -3v-4" fill="none" stroke-width="1.5" stroke="white" stroke-linecap="round"/></svg>');
 }
-article.mac .browser .toolbar .button.setting::after {
+.mac .browser .toolbar .button.setting::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><g fill="white"><circle r="1.5"/><circle cy="6" r="1.5"/><circle cy="-6" r="1.5"/></g></svg>');
 }
-article.mac .browser .toolbar .address {
+.mac .browser .toolbar .address {
   background: #2b2b2b;
   color: white;
 }
-article.mac .browser .toolbar .address:focus,
-article.mac .browser .toolbar .address:hover {
+.mac .browser .toolbar .address:focus,
+.mac .browser .toolbar .address:hover {
   outline-color: #656565;
 }
-.light article.mac .browser .titlebar {
+.mac.light .browser .titlebar {
   background: #cdcdcd;
   color: black;
 }
-.light article.mac .browser .titlebar .titlebar-title {
+.mac.light .browser .titlebar .titlebar-title {
   background: #f7f7f7;
 }
-.light article.mac .browser .titlebar .titlebar-title .titlebar-icon:empty::after {
+.mac.light .browser .titlebar .titlebar-title .titlebar-icon:empty::after {
   content: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M24 10V25a2 2 0 0 1 -2 2h-14a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9zh-7v-7" fill="none" stroke="black" stroke-width="1.5"/></svg>');
 }
-.light article.mac .browser .titlebar .titlebar-title::after {
+.mac.light .browser .titlebar .titlebar-title::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -14 30 30"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
 }
-.light article.mac .browser .titlebar .titlebar-extra:hover {
+.mac.light .browser .titlebar .titlebar-extra:hover {
   background: #adadad;
 }
-.light article.mac .browser .titlebar .titlebar-extra::after {
+.mac.light .browser .titlebar .titlebar-extra::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-7 0 L7 0M0-7L0 7" stroke-width="1" stroke="black"/></svg>');
 }
-.light article.mac .browser .toolbar {
+.mac.light .browser .toolbar {
   color: black;
   background: #f7f7f7;
 }
-.light article.mac .browser .toolbar .button:hover {
+.mac.light .browser .toolbar .button:hover {
   background: #e4e4e4;
 }
-.light article.mac .browser .toolbar .button.backward::after {
+.mac.light .browser .toolbar .button.backward::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M-6 0 L0 -6M-6 0L0 6M-6 0 L7 0" stroke-width="1.5" stroke="black" stroke-linecap="round"/></svg>');
 }
-.light article.mac .browser .toolbar .button.foreward::after {
+.mac.light .browser .toolbar .button.foreward::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 L0 -6M6 0L0 6M6 0 L-7 0" stroke-width="1.5" stroke="black" stroke-linecap="round"/></svg>');
 }
-.light article.mac .browser .toolbar .button.refresh::after {
+.mac.light .browser .toolbar .button.refresh::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><path d="M6 0 A6 6 1 1 1 5.2 -3M5.2 -3h-4M5.2 -3v-4" fill="none" stroke-width="1.5" stroke="black" stroke-linecap="round"/></svg>');
 }
-.light article.mac .browser .toolbar .button.setting::after {
+.mac.light .browser .toolbar .button.setting::after {
   content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30"><g fill="black"><circle r="1.5"/><circle cy="6" r="1.5"/><circle cy="-6" r="1.5"/></g></svg>');
 }
-.light article.mac .browser .toolbar .address {
+.mac.light .browser .toolbar .address {
   background: #ffffff;
   color: black;
 }
-.light article.mac .browser .toolbar .address:focus,
-.light article.mac .browser .toolbar .address:hover {
+.mac.light .browser .toolbar .address:focus,
+.mac.light .browser .toolbar .address:hover {
   outline-color: #cccccc;
 }

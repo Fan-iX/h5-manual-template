@@ -3,15 +3,27 @@
 .editor,
 .terminal {
     border: 1px gray solid;
+
+    .titlebar {
+        display: none;
+    }
+
+    .toolbar {
+        display: none;
+    }
 }
 
-article.win {
+.win {
 
     .browser,
     .slide,
     .editor,
     .terminal {
         .titlebar {
+            display: block;
+            user-select: none;
+            box-sizing: border-box;
+
             .button {
                 float: right;
                 width: 3em;
@@ -43,32 +55,30 @@ article.win {
     }
 }
 
-.light {
-    article.win {
+.light.win {
 
-        .browser,
-        .slide,
-        .editor,
-        .terminal {
-            .titlebar {
-                .button {
-                    &.btn-3::after {
-                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-5 0 L5 0" stroke-width="1" stroke="black"/></svg>');
-                    }
+    .browser,
+    .slide,
+    .editor,
+    .terminal {
+        .titlebar {
+            .button {
+                &.btn-3::after {
+                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-5 0 L5 0" stroke-width="1" stroke="black"/></svg>');
+                }
 
 
-                    &.btn-2::after {
-                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="black"/></svg>');
-                    }
+                &.btn-2::after {
+                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4h8v8h-8z" fill="none" stroke-linejoin="round" stroke-width="1" stroke="black"/></svg>');
+                }
 
-                    &.btn-1::after {
-                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
-                    }
+                &.btn-1::after {
+                    content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="black"/></svg>');
+                }
 
-                    &.btn-1:hover {
-                        &::after {
-                            content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
-                        }
+                &.btn-1:hover {
+                    &::after {
+                        content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40"><path d="M-4 -4L4 4M4 -4L-4 4" stroke-linecap="round" stroke-width="1" stroke="white"/></svg>');
                     }
                 }
             }
@@ -77,14 +87,21 @@ article.win {
 }
 
 
-article.mac {
+.mac {
 
     .browser,
     .slide,
     .editor,
     .terminal {
         .titlebar {
+            overflow: hidden;
+            text-align: center;
+            user-select: none;
+            display: block;
             padding-left: 0.5em;
+            width: 100%;
+            box-sizing: border-box;
+            height: 1.5em;
 
             .button {
                 float: left;
@@ -111,6 +128,54 @@ article.mac {
                     content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle r="3.5" cx="5" cy="5" fill="%233ec544"/></svg>');
                 }
             }
+
+            .titlebar-title {
+                display: inline-flex;
+                width: calc(100% - 10em);
+                height: 100%;
+                vertical-align: top;
+                align-items: center;
+                justify-content: center;
+                margin-right: 4.3em;
+
+                .titlebar-text {
+                    font-size: 0.8em;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                }
+            }
+
+            .titlebar-extra {
+                display: none;
+            }
+        }
+    }
+}
+
+.mac {
+
+    .browser,
+    .slide,
+    .editor,
+    .terminal {
+        .titlebar {
+            background: linear-gradient(to top, #333333, #404040);
+            color: #aaaaaa;
+        }
+    }
+}
+
+.light.mac {
+
+    .browser,
+    .slide,
+    .editor,
+    .terminal {
+        .titlebar {
+            background: #cccccc;
+            color: #595959;
         }
     }
 }

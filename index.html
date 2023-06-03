@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/window.css">
   <link rel="stylesheet" href="css/slide.css">
   <link rel="stylesheet" href="css/style.css">
@@ -14,14 +15,15 @@
   <link rel="stylesheet" href="css/editor.css">
 </head>
 
-<body class="light">
-  <article class="mac">
-    <select onchange='document.querySelector("article").className=this.value'>
+<body class="dark win">
+  <article>
+    <select onchange='document.body.classList.remove("win","mac");document.body.classList.add(this.value)'>
       <option value="win">Windows</option>
       <option value="mac">MacOS</option>
     </select>
-    <select onchange='document.body.className=this.value'>
+    <select onchange='document.body.classList.remove("dark","light");document.body.classList.add(this.value)'>
       <option value="dark">暗</option>
+      <option value="">默认</option>
       <option value="light">亮</option>
     </select>
 
@@ -52,17 +54,17 @@
             <p>You could apply the <code>padding-bottom</code> to its <code>::before</code> pseudoelement,
               e.g.</p>
             <pre class="code">
-.some-class {
-  width: 100%;
-  max-width: 520px;
-  border: 1px #9bc solid;
-}
-.some-class::before {
-   padding-bottom: 100%;
-   content: "";
-   display: inline-block;
-   vertical-align: top;
-}</pre>
+      .some-class {
+        width: 100%;
+        max-width: 520px;
+        border: 1px #9bc solid;
+      }
+      .some-class::before {
+         padding-bottom: 100%;
+         content: "";
+         display: inline-block;
+         vertical-align: top;
+      }</pre>
           </div>
         </section>
         <section class="slide-page">
@@ -103,7 +105,7 @@
           <li><a href="javascript:;">software/</a></li>
       </div>
     </div>
-    <div class="terminal">
+    <div class="terminal win32">
       <div class="titlebar">
         <div class="titlebar-title">
           <div class="titlebar-icon"></div>

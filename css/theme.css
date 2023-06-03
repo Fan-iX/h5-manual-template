@@ -1,0 +1,27 @@
+.dark {
+  color: white;
+  background: #1a1b1b;
+}
+.dark .task-box {
+  background: #1a1b1b;
+}
+.dark select,
+.dark input {
+  color: white;
+  background: #1a1b1b;
+}
+.dark .slide .body {
+  background: #999999;
+}
+.dark .slide .body .slide-page {
+  background: #1a1b1b;
+}
+.dark .slide .body a {
+  color: #738ba5;
+}
+.dark .browser .body a {
+  color: #738ba5;
+}
+.light .slide .body {
+  background: #999999;
+}
