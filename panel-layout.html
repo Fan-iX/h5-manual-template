@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>panel layout</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/slide.css">
+  <link rel="stylesheet" href="css/window.css">
+  <link rel="stylesheet" href="css/miscellaneous.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body class="panel win">
+  <div class="panel-h">
+    <div class="terminal">
+      <div class="titlebar">
+        <div class="titlebar-title">
+          <div class="titlebar-icon"></div>
+          <div class="titlebar-text">coli@DESKTOP-J45M1NUM:~</div>
+        </div>
+        <div class="titlebar-extra"></div>
+        <div class="button btn-1"></div>
+        <div class="button btn-2"></div>
+        <div class="button btn-3"></div>
+      </div>
+      <div class="terminal-body">
+        <pre class="terminal-code" oncontextmenu="event.preventDefault()">
+<details data-manual="ls"><summary><span class="bash ps1">[<span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>]$ </span>whoami</summary>
+coli</details>
+<details data-manual="ls"><summary><span class="bash ps1">[<span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>]$ </span>whoami</summary>
+coli</details>
+<span class="bash ps1">[<span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>]$ </span><span contentEditable="true" spellcheck="false">‎</span>
+</pre>
+      </div>
+    </div>
+
+    <div class="panel-v">
+      <article>
+        <hgroup>
+          <h1>Header 1</h1>
+        </hgroup>
+
+        <p>
+          <select onchange='document.body.classList.remove("win","mac");document.body.classList.add(this.value)'>
+            <option value="win">Windows</option>
+            <option value="mac">MacOS</option>
+          </select>
+          <select onchange='document.body.classList.remove("dark","light");document.body.classList.add(this.value)'>
+            <option value="dark">暗</option>
+            <option value="default">默认</option>
+            <option value="light">亮</option>
+          </select>
+          <input type="text">
+        </p>
+        <details class="task-box" id="task-box" open>
+          <summary>任务目标</summary>
+          <ol id="task-list">
+            <li><input type="checkbox" id="task-1">任务1
+              <ol>
+                <li><input type="checkbox" id="task-1-1">任务1.1</li>
+                <li><input type="checkbox" id="task-1-1">任务1.2</li>
+              </ol>
+            </li>
+            <li><input type="checkbox" id="task-2">任务2</li>
+            <li><input type="checkbox" id="task-3">任务3</li>
+          </ol>
+        </details>
+        <h3>ssh密钥登陆</h3>
+        <p>除了使用密码进行登录身份验证之外，OpenSSH还支持通过密钥完成登录身份验证。</p>
+        <p>一对ssh密钥由私钥和公钥两个文件组成，它们是两段不同的复杂的随机文本。一段数据由公钥加密后可以由其对应的私钥解密还原，而在没有私钥的情况下，仅根据公钥和密文的来推断加密前的数据被认为是不可实现的。因此，密钥可被用于身份验证：用户在服务器端和客户端分别存储公钥和私钥，需要身份验证时，服务器端将一段加密后的文本发送到客户端，客户端将通过私钥将密文解密后发回服务器端，如果服务器端收到的文本与加密前的文本一致，那么用户身份得以验证。</p>
+        <p>利用<code>ssh-keygen</code>可以生成一组全新的ssh密钥</p>
+        <p>其中<code>/home/coli/.ssh/id_rsa</code>指定了生成的密钥文件的储存位置，<code>passphrase</code>是私钥口令，每次使用私钥登录前都需要输入此口令以启用私钥，相当于给私钥再设置一个密码。</p>
+        <p>按照其默认配置（全部留空）生成的私钥文件储存在<code>/home/coli/.ssh/id_rsa</code>，公钥文件储存在<code>/home/coli/.ssh/id_rsa.pub</code>。</p>
+        <p>要通过密钥登录到远程设备，还需要将公钥复制到远程设备的<code>~/.ssh/authorized_keys</code>下，可以通过<code>scp</code>将文件传输到远程设备：</p>
+      </article>
+
+      <div class="slide">
+        <div class="titlebar">
+          <div class="titlebar-title">
+            <div class="titlebar-icon"></div>
+            <div class="titlebar-text">
+              This is not actually not a pdf file but it has a long file name so that its
+              text may overflow the container.pdf - ebodA Clown (32-bit)
+            </div>
+          </div>
+          <div class="titlebar-extra"></div>
+          <div class="button btn-1"></div>
+          <div class="button btn-2"></div>
+          <div class="button btn-3"></div>
+        </div>
+        <div class="toolbar">
+          <div class="menu menu-1"></div>
+          <div class="menu menu-2"></div>
+          <div class="menu menu-3"></div>
+          <div class="menu menu-4"></div>
+        </div>
+        <div class="body" id="manual-container">
+          <section class="slide-page">
+            <h2>这是一段示例文字</h2>
+            <div class="s-prose js-post-body" itemprop="text">
+              <p>You could apply the <code>padding-bottom</code> to its <code>::before</code>
+                pseudoelement,
+                e.g.</p>
+              <pre class="code">
+        .some-class {
+          width: 100%;
+          max-width: 520px;
+          border: 1px #9bc solid;
+        }
+        .some-class::before {
+           padding-bottom: 100%;
+           content: "";
+           display: inline-block;
+           vertical-align: top;
+        }</pre>
+            </div>
+          </section>
+          <section class="slide-page">
+            <h2>这是另一段示例文字</h2>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

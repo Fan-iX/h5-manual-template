@@ -1,0 +1,54 @@
+body.article {
+  margin: 8px auto;
+  max-width: 800px;
+  padding-bottom: 50vh;
+}
+body.panel {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.panel-h,
+.panel-v {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.panel-h > *,
+.panel-v > * {
+  flex: 1 1 0;
+}
+.panel-h .browser,
+.panel-v .browser,
+.panel-h .slide,
+.panel-v .slide,
+.panel-h .editor,
+.panel-v .editor,
+.panel-h .terminal,
+.panel-v .terminal {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.panel-h .browser .body,
+.panel-v .browser .body,
+.panel-h .slide .body,
+.panel-v .slide .body,
+.panel-h .editor .editor-body,
+.panel-v .editor .editor-body,
+.panel-h .terminal .terminal-body,
+.panel-v .terminal .terminal-body {
+  flex: 1;
+}
+.panel-h {
+  flex-direction: row;
+}
+.panel-h > * {
+  overflow-x: auto;
+}
+.panel-v {
+  flex-direction: column;
+}
+.panel-v > * {
+  overflow-y: auto;
+}

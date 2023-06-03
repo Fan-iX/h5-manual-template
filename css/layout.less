@@ -1,0 +1,54 @@
+body.article {
+    margin: 8px auto;
+    max-width: 800px;
+    padding-bottom: 50vh;
+}
+
+body.panel {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.panel-h,
+.panel-v {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    &>* {
+        flex: 1 1 0;
+    }
+
+    .browser,
+    .slide,
+    .editor,
+    .terminal {
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .browser .body,
+    .slide .body,
+    .editor .editor-body,
+    .terminal .terminal-body {
+        flex: 1;
+    }
+}
+
+.panel-h {
+    flex-direction: row;
+
+    &>* {
+        overflow-x: auto;
+    }
+}
+
+.panel-v {
+    flex-direction: column;
+
+    &>* {
+        overflow-y: auto;
+    }
+}
