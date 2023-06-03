@@ -2,12 +2,12 @@
 @import "bash";
 
 .terminal {
+
     .titlebar {
         display: none;
     }
 
-    .terminal-panel {
-        height: 30em;
+    .terminal-body {
         width: 100%;
         overflow-y: scroll;
         box-sizing: border-box;
@@ -54,34 +54,34 @@
         background: none;
     }
 
-    .terminal-panel:not(.vertical)>.terminal-code {
+    .terminal-body:not(.vertical)>.terminal-code {
         border-style: none solid;
         padding: 8px 1.5ch;
         width: 100%;
     }
 
-    .terminal-panel:not(.vertical)>.terminal-code:first-child {
+    .terminal-body:not(.vertical)>.terminal-code:first-child {
         border-left: none
     }
 
-    .terminal-panel:not(.vertical)>.terminal-code:last-child {
+    .terminal-body:not(.vertical)>.terminal-code:last-child {
         border-right: none
     }
 
-    .terminal-panel.vertical {
+    .terminal-body.vertical {
         flex-direction: column;
     }
 
-    .terminal-panel.vertical>.terminal-code {
+    .terminal-body.vertical>.terminal-code {
         border-style: solid none;
         height: 100%;
     }
 
-    .terminal-panel.vertical>.terminal-code:first-child {
+    .terminal-body.vertical>.terminal-code:first-child {
         border-top: none
     }
 
-    .terminal-panel.vertical>.terminal-code:last-child {
+    .terminal-body.vertical>.terminal-code:last-child {
         border-bottom: none
     }
 }
@@ -146,7 +146,7 @@
 }
 
 .terminal {
-    .terminal-panel {
+    .terminal-body {
         background: var(--tc-background, black);
     }
 
@@ -233,7 +233,7 @@
 
 .light {
     .terminal {
-        .terminal-panel {
+        .terminal-body {
             color: var(--tc-background, white);
         }
 

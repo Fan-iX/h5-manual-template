@@ -13,8 +13,7 @@
 .terminal .titlebar {
   display: none;
 }
-.terminal .terminal-panel {
-  height: 30em;
+.terminal .terminal-body {
   width: 100%;
   overflow-y: scroll;
   box-sizing: border-box;
@@ -51,28 +50,28 @@
 .terminal ::-webkit-scrollbar-corner {
   background: none;
 }
-.terminal .terminal-panel:not(.vertical) > .terminal-code {
+.terminal .terminal-body:not(.vertical) > .terminal-code {
   border-style: none solid;
   padding: 8px 1.5ch;
   width: 100%;
 }
-.terminal .terminal-panel:not(.vertical) > .terminal-code:first-child {
+.terminal .terminal-body:not(.vertical) > .terminal-code:first-child {
   border-left: none;
 }
-.terminal .terminal-panel:not(.vertical) > .terminal-code:last-child {
+.terminal .terminal-body:not(.vertical) > .terminal-code:last-child {
   border-right: none;
 }
-.terminal .terminal-panel.vertical {
+.terminal .terminal-body.vertical {
   flex-direction: column;
 }
-.terminal .terminal-panel.vertical > .terminal-code {
+.terminal .terminal-body.vertical > .terminal-code {
   border-style: solid none;
   height: 100%;
 }
-.terminal .terminal-panel.vertical > .terminal-code:first-child {
+.terminal .terminal-body.vertical > .terminal-code:first-child {
   border-top: none;
 }
-.terminal .terminal-panel.vertical > .terminal-code:last-child {
+.terminal .terminal-body.vertical > .terminal-code:last-child {
   border-bottom: none;
 }
 .terminal {
@@ -123,7 +122,7 @@
   --tc-foreground: #eeedf0;
   --tc-background: #012456;
 }
-.terminal .terminal-panel {
+.terminal .terminal-body {
   background: var(--tc-background, black);
 }
 .terminal .terminal-code {
@@ -186,7 +185,7 @@
 .terminal ::-webkit-scrollbar-thumb:active {
   background: #787878;
 }
-.light .terminal .terminal-panel {
+.light .terminal .terminal-body {
   color: var(--tc-background, white);
 }
 .light .terminal .terminal-code {

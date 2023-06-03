@@ -3,14 +3,26 @@
 .editor,
 .terminal {
     border: 1px gray solid;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
 
     .titlebar {
         display: none;
+        flex: 0 0 auto;
     }
 
     .toolbar {
         display: none;
+        flex: 0 0 auto;
     }
+}
+
+.browser .body,
+.slide .body,
+.editor .editor-body,
+.terminal .terminal-body {
+    height: 30em;
 }
 
 .win {
