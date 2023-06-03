@@ -79,12 +79,6 @@ kbd {
     border-radius: 3px;
 }
 
-article {
-    margin: 0 auto;
-    max-width: 800px;
-    padding-bottom: 50vh;
-}
-
 [contentEditable=true]:focus-visible {
     outline: none;
 }

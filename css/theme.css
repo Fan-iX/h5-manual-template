@@ -10,6 +10,10 @@
   color: white;
   background: #1a1b1b;
 }
+.dark input[type=text] {
+  border: 1px solid #757575;
+  border-radius: 3px;
+}
 .dark .slide .body {
   background: #999999;
 }
