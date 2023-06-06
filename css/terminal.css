@@ -35,8 +35,26 @@
 .terminal .terminal-code .ps1 {
   user-select: none;
 }
+.terminal .terminal-code details {
+  display: inline-block;
+}
+.terminal .terminal-code details summary {
+  display: inline-block;
+  text-indent: -1ch;
+}
+.terminal .terminal-code details summary::before {
+  content: "○";
+}
 .terminal .terminal-code details[open] .ps1 {
   user-select: auto;
+}
+.terminal .terminal-code details[open] summary::before {
+  content: "●";
+  color: #3b8eea;
+}
+.terminal .terminal-code details[open] summary.error::before {
+  content: "●";
+  color: #f14c4c;
 }
 .terminal ::-webkit-scrollbar {
   width: 0.4em;

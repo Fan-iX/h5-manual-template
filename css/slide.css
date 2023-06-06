@@ -3,7 +3,6 @@
   overflow-y: scroll;
   box-sizing: border-box;
   position: relative;
-  resize: vertical;
   background: #282828;
 }
 .slide .body .slide-page {
@@ -15,7 +14,13 @@
   height: 450px;
   font-size: 20px;
 }
-.slide .body h2 {
+.slide .body .slide-page h1 {
+  text-align: center;
+  margin: 0.5em 0;
+  font-weight: normal;
+  font-size: 3.2em;
+}
+.slide .body .slide-page h2 {
   margin: 0 auto;
   font-size: 2em;
 }
@@ -36,6 +41,9 @@
   .slide .body .slide-page li {
     font-size: 2.5cqw;
   }
+  .slide .body .slide-page h1 {
+    font-size: 8cqw;
+  }
   .slide .body .slide-page h2 {
     font-size: 5cqw;
     margin-bottom: 0.25em;
@@ -51,16 +59,6 @@
     margin-top: 0.25em;
     margin-bottom: 0;
   }
-}
-.slide .body h1 {
-  all: initial;
-  font-size: 2em;
-}
-.slide .body a {
-  font: initial;
-  text-decoration: underline;
-  color: blue;
-  cursor: pointer;
 }
 .win .slide .titlebar {
   padding-left: 0.25em;

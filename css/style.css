@@ -1,89 +1,32 @@
 abbr {
-    cursor: help;
+  cursor: help;
 }
-
 input[type=text],
 select {
-    font-size: 1em;
+  font-size: 1em;
 }
-
 code {
-    padding: .2em;
+  padding: 0.2em;
 }
-
 code.q::before,
 code.q::after {
-    content: "`";
+  content: "`";
 }
-
-pre.terminal-code details summary::before {
-    content: "○";
-}
-
-pre.terminal-code details[open] summary::before {
-    content: "●";
-    color: #3b8eea;
-}
-
-pre.terminal-code details {
-    display: inline-block;
-}
-
-pre.terminal-code details summary {
-    display: inline-block;
-    text-indent: -1ch;
-}
-
-summary {
-    display: block;
-}
-
-details.task-box summary::before {
-    margin: 0 1ch;
-    display: inline-block;
-    transition: 0.2s;
-    content: '▶';
-}
-
-details.task-box summary {
-    transition: margin 150ms ease-out;
-}
-
-details.task-box[open] summary {
-    margin-bottom: 10px;
-
-}
-
-#task-list {
-    margin: 0;
-}
-
-details.task-box[open] {
-    padding-bottom: 0.5em;
-}
-
-details.task-box[open] summary::before {
-    transform: rotate(90deg);
-}
-
 .help {
-    cursor: help;
-    text-decoration: underline dotted;
+  cursor: help;
+  text-decoration: underline dotted;
 }
-
 kbd {
-    font-size: 0.8em;
-    border: 1px solid #d6d6d6;
-    border-bottom: 2px solid #c7c7c7;
-    padding: 1.5px 3px;
-    border-radius: 3px;
+  font-size: 0.8em;
+  border: 1px solid #d6d6d6;
+  border-bottom: 2px solid #c7c7c7;
+  padding: 1.5px 3px;
+  border-radius: 3px;
 }
-
 [contentEditable=true]:focus-visible {
-    outline: none;
+  outline: none;
 }
-
 pre,
 code {
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }

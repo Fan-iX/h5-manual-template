@@ -3,10 +3,16 @@ body.article {
   max-width: 800px;
   padding-bottom: 50vh;
 }
+body.article .slide .body {
+  resize: vertical;
+}
 body.panel {
   margin: 0;
   width: 100vw;
   height: 100vh;
+}
+body.panel article {
+  padding: 0 3em;
 }
 .panel-h,
 .panel-v {

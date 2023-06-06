@@ -31,9 +31,32 @@
             user-select: none;
         }
 
+        details {
+            display: inline-block;
+
+            summary {
+                display: inline-block;
+                text-indent: -1ch;
+            }
+
+            summary::before {
+                content: "○";
+            }
+        }
+
         details[open] {
             .ps1 {
                 user-select: auto;
+            }
+
+            summary::before {
+                content: "●";
+                color: #3b8eea;
+            }
+
+            summary.error::before {
+                content: "●";
+                color: #f14c4c;
             }
         }
     }

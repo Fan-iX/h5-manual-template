@@ -6,7 +6,6 @@
         overflow-y: scroll;
         box-sizing: border-box;
         position: relative;
-        resize: vertical;
         background: #282828;
 
         .slide-page {
@@ -17,11 +16,18 @@
             width: 800px;
             height: 450px;
             font-size: 20px;
-        }
 
-        h2 {
-            margin: 0 auto;
-            font-size: 2em;
+            h1 {
+                text-align: center;
+                margin: 0.5em 0;
+                font-weight: normal;
+                font-size: 3.2em;
+            }
+
+            h2 {
+                margin: 0 auto;
+                font-size: 2em;
+            }
         }
 
         @supports (font-size: 2.5cqw) {
@@ -40,6 +46,10 @@
                 p,
                 li {
                     font-size: 2.5cqw;
+                }
+
+                h1 {
+                    font-size: 8cqw;
                 }
 
                 h2 {
@@ -62,18 +72,6 @@
                 }
             }
         }
-    }
-
-    .body h1 {
-        all: initial;
-        font-size: 2em;
-    }
-
-    .body a {
-        font: initial;
-        text-decoration: underline;
-        color: blue;
-        cursor: pointer;
     }
 }
 
