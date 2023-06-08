@@ -14,7 +14,7 @@
         display: flex;
         overflow-y: hidden;
 
-        .panel-h>.terminal-code {
+        .panel-h>* {
             border-color: #4c4a48;
             border-style: none solid;
     
@@ -27,9 +27,9 @@
             }
         }
     
-        .panel-v>.terminal-code {
+        .panel-v>* {
+            border-color: #4c4a48;
             border-style: solid none;
-            height: 100%;
     
             &:first-child {
                 border-top: none
@@ -47,7 +47,6 @@
             white-space: pre-wrap;
             word-break: break-all;
             border-width: 1px;
-            border-color: gray;
             border-radius: 0;
             font-size: 1rem !important;
             box-sizing: border-box;
