@@ -20,7 +20,28 @@
   display: flex;
   overflow-y: hidden;
 }
-.terminal .terminal-code {
+.terminal .terminal-body .panel-h > .terminal-code {
+  border-color: #4c4a48;
+  border-style: none solid;
+}
+.terminal .terminal-body .panel-h > .terminal-code:first-child {
+  border-left: none;
+}
+.terminal .terminal-body .panel-h > .terminal-code:last-child {
+  border-right: none;
+}
+.terminal .terminal-body .panel-v > .terminal-code {
+  border-style: solid none;
+  height: 100%;
+}
+.terminal .terminal-body .panel-v > .terminal-code:first-child {
+  border-top: none;
+}
+.terminal .terminal-body .panel-v > .terminal-code:last-child {
+  border-bottom: none;
+}
+.terminal .terminal-body .terminal-code {
+  padding: 8px 1.5ch;
   margin: 0;
   cursor: default;
   white-space: pre-wrap;
@@ -32,27 +53,27 @@
   box-sizing: border-box;
   overflow: auto;
 }
-.terminal .terminal-code .ps1 {
+.terminal .terminal-body .terminal-code .ps1 {
   user-select: none;
 }
-.terminal .terminal-code details {
+.terminal .terminal-body .terminal-code details {
   display: inline-block;
 }
-.terminal .terminal-code details summary {
+.terminal .terminal-body .terminal-code details summary {
   display: inline-block;
   text-indent: -1ch;
 }
-.terminal .terminal-code details summary::before {
+.terminal .terminal-body .terminal-code details summary::before {
   content: "○";
 }
-.terminal .terminal-code details[open] .ps1 {
+.terminal .terminal-body .terminal-code details[open] .ps1 {
   user-select: auto;
 }
-.terminal .terminal-code details[open] summary::before {
+.terminal .terminal-body .terminal-code details[open] summary::before {
   content: "●";
   color: #3b8eea;
 }
-.terminal .terminal-code details[open] summary.error::before {
+.terminal .terminal-body .terminal-code details[open] summary.error::before {
   content: "●";
   color: #f14c4c;
 }
@@ -67,30 +88,6 @@
 }
 .terminal ::-webkit-scrollbar-corner {
   background: none;
-}
-.terminal .terminal-body:not(.vertical) > .terminal-code {
-  border-style: none solid;
-  padding: 8px 1.5ch;
-  width: 100%;
-}
-.terminal .terminal-body:not(.vertical) > .terminal-code:first-child {
-  border-left: none;
-}
-.terminal .terminal-body:not(.vertical) > .terminal-code:last-child {
-  border-right: none;
-}
-.terminal .terminal-body.vertical {
-  flex-direction: column;
-}
-.terminal .terminal-body.vertical > .terminal-code {
-  border-style: solid none;
-  height: 100%;
-}
-.terminal .terminal-body.vertical > .terminal-code:first-child {
-  border-top: none;
-}
-.terminal .terminal-body.vertical > .terminal-code:last-child {
-  border-bottom: none;
 }
 .terminal {
   --tc-foreground: #c0c0c0;

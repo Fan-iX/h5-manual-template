@@ -52,10 +52,6 @@
   margin-top: 0.25em;
   margin-bottom: 0;
 }
-.slide .body .slide-container .slide-page code,
-.slide .body .slide-container .slide-page pre.code {
-  font-size: 0.8em;
-}
 .win .slide .titlebar {
   padding-left: 0.25em;
   height: 1.5em;
