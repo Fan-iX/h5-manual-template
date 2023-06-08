@@ -8,30 +8,16 @@
         position: relative;
         background: #282828;
 
-        .slide-page {
+        .slide-container {
             box-sizing: border-box;
             background: white;
-            padding: 2% 5%;
             margin: 8px auto;
             width: 800px;
             height: 450px;
             font-size: 20px;
 
-            h1 {
-                text-align: center;
-                margin: 0.5em 0;
-                font-weight: normal;
-                font-size: 3.2em;
-            }
-
-            h2 {
-                margin: 0 auto;
-                font-size: 2em;
-            }
-        }
-
-        @supports (font-size: 2.5cqw) {
-            .slide-page {
+            @supports (font-size: 2.5cqw) {
+                container-type: inline-size;
                 width: unset;
                 height: unset;
                 min-width: 700px;
@@ -39,26 +25,28 @@
                 max-width: 100%;
                 max-height: 100%;
                 aspect-ratio: 16 / 9;
-                container-type: inline-size;
 
-                div,
-                pre,
-                p,
-                li {
+                .slide-page {
                     font-size: 2.5cqw;
                 }
+            }
+
+            .slide-page {
+                width: 100%;
+                height: 100%;
+                padding: 2% 5%;
+                box-sizing: border-box;
 
                 h1 {
-                    font-size: 8cqw;
+                    text-align: center;
+                    margin: 0.5em 0;
+                    font-weight: normal;
+                    font-size: 3.2em;
                 }
 
                 h2 {
-                    font-size: 5cqw;
-                    margin-bottom: 0.25em;
-                }
-
-                pre.code {
-                    font-size: 2cqw;
+                    margin: 0 auto;
+                    font-size: 2em;
                 }
 
                 ul,
@@ -70,7 +58,13 @@
                     margin-top: 0.25em;
                     margin-bottom: 0;
                 }
+
+                code,
+                pre.code {
+                    font-size: 0.8em;
+                }
             }
+
         }
     }
 }

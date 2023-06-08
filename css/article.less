@@ -1,0 +1,53 @@
+article {
+    .task-box {
+
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1;
+
+        summary {
+            display: block;
+            transition: margin 150ms ease-out;
+            user-select: none;
+
+            &::before {
+                margin: 0 1ch;
+                display: inline-block;
+                transition: 0.2s;
+                content: '▶';
+            }
+        }
+
+        #task-list {
+            margin: 0;
+        }
+
+        ol {
+            counter-reset: item;
+            padding-inline-start: 1em;
+        }
+
+        li {
+            display: block;
+        }
+
+        li:before {
+            content: counters(item, ".") ".";
+            counter-increment: item
+        }
+    }
+
+    .task-box[open] {
+        padding-bottom: 0.5em;
+
+        summary {
+            margin-bottom: 10px;
+
+            &::before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}

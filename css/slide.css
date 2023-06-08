@@ -5,27 +5,17 @@
   position: relative;
   background: #282828;
 }
-.slide .body .slide-page {
+.slide .body .slide-container {
   box-sizing: border-box;
   background: white;
-  padding: 2% 5%;
   margin: 8px auto;
   width: 800px;
   height: 450px;
   font-size: 20px;
 }
-.slide .body .slide-page h1 {
-  text-align: center;
-  margin: 0.5em 0;
-  font-weight: normal;
-  font-size: 3.2em;
-}
-.slide .body .slide-page h2 {
-  margin: 0 auto;
-  font-size: 2em;
-}
 @supports (font-size: 2.5cqw) {
-  .slide .body .slide-page {
+  .slide .body .slide-container {
+    container-type: inline-size;
     width: unset;
     height: unset;
     min-width: 700px;
@@ -33,32 +23,38 @@
     max-width: 100%;
     max-height: 100%;
     aspect-ratio: 16 / 9;
-    container-type: inline-size;
   }
-  .slide .body .slide-page div,
-  .slide .body .slide-page pre,
-  .slide .body .slide-page p,
-  .slide .body .slide-page li {
+  .slide .body .slide-container .slide-page {
     font-size: 2.5cqw;
   }
-  .slide .body .slide-page h1 {
-    font-size: 8cqw;
-  }
-  .slide .body .slide-page h2 {
-    font-size: 5cqw;
-    margin-bottom: 0.25em;
-  }
-  .slide .body .slide-page pre.code {
-    font-size: 2cqw;
-  }
-  .slide .body .slide-page ul,
-  .slide .body .slide-page ol {
-    margin: 0;
-  }
-  .slide .body .slide-page p {
-    margin-top: 0.25em;
-    margin-bottom: 0;
-  }
+}
+.slide .body .slide-container .slide-page {
+  width: 100%;
+  height: 100%;
+  padding: 2% 5%;
+  box-sizing: border-box;
+}
+.slide .body .slide-container .slide-page h1 {
+  text-align: center;
+  margin: 0.5em 0;
+  font-weight: normal;
+  font-size: 3.2em;
+}
+.slide .body .slide-container .slide-page h2 {
+  margin: 0 auto;
+  font-size: 2em;
+}
+.slide .body .slide-container .slide-page ul,
+.slide .body .slide-container .slide-page ol {
+  margin: 0;
+}
+.slide .body .slide-container .slide-page p {
+  margin-top: 0.25em;
+  margin-bottom: 0;
+}
+.slide .body .slide-container .slide-page code,
+.slide .body .slide-container .slide-page pre.code {
+  font-size: 0.8em;
 }
 .win .slide .titlebar {
   padding-left: 0.25em;
