@@ -52,6 +52,10 @@
   box-sizing: border-box;
   overflow: auto;
 }
+.terminal .terminal-body .terminal-code::selection,
+.terminal .terminal-body .terminal-code *::selection {
+  background: var(--tc-selection);
+}
 .terminal .terminal-body .terminal-code .ps1 {
   user-select: none;
 }
@@ -91,6 +95,7 @@
 .terminal {
   --tc-foreground: #c0c0c0;
   --tc-background: #000000;
+  --tc-selection: #606060;
   --tc-black: #000000;
   --tc-white: #e5e5e5;
   --tc-red: #cd3131;

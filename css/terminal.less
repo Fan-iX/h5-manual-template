@@ -17,24 +17,24 @@
         .panel-h>* {
             border-color: #4c4a48;
             border-style: none solid;
-    
+
             &:first-child {
                 border-left: none
             }
-    
+
             &:last-child {
                 border-right: none
             }
         }
-    
+
         .panel-v>* {
             border-color: #4c4a48;
             border-style: solid none;
-    
+
             &:first-child {
                 border-top: none
             }
-    
+
             &:last-child {
                 border-bottom: none
             }
@@ -51,6 +51,11 @@
             font-size: 1rem !important;
             box-sizing: border-box;
             overflow: auto;
+
+            &::selection,
+            *::selection {
+                background: var(--tc-selection);
+            }
 
             .ps1 {
                 user-select: none;
@@ -107,6 +112,7 @@
 .terminal {
     --tc-foreground: #c0c0c0;
     --tc-background: #000000;
+    --tc-selection: #606060;
     --tc-black: #000000;
     --tc-white: #e5e5e5;
     --tc-red: #cd3131;
