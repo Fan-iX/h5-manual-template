@@ -50,33 +50,36 @@
   border-radius: 0;
   font-size: 1rem !important;
   box-sizing: border-box;
-  overflow: auto;
+  overflow: hidden auto;
 }
 .terminal .terminal-body .terminal-code::selection,
 .terminal .terminal-body .terminal-code *::selection {
   background: var(--tc-selection);
 }
-.terminal .terminal-body .terminal-code .ps1 {
-  user-select: none;
-}
 .terminal .terminal-body .terminal-code details {
   display: inline-block;
+  width: 100%;
+  margin-right: 16px;
 }
 .terminal .terminal-body .terminal-code details summary {
   display: inline-block;
-  text-indent: -1ch;
+  width: 100%;
+  margin-right: 16px;
 }
-.terminal .terminal-body .terminal-code details summary::before {
+.terminal .terminal-body .terminal-code details summary .ps1 {
+  position: relative;
+}
+.terminal .terminal-body .terminal-code details summary .ps1::before {
   content: "○";
+  position: absolute;
+  bottom: 0;
+  left: -1.2ch;
 }
-.terminal .terminal-body .terminal-code details[open] .ps1 {
-  user-select: auto;
-}
-.terminal .terminal-body .terminal-code details[open] summary::before {
+.terminal .terminal-body .terminal-code details[open] summary .ps1::before {
   content: "●";
   color: #3b8eea;
 }
-.terminal .terminal-body .terminal-code details[open] summary.error::before {
+.terminal .terminal-body .terminal-code details[open] summary.error .ps1::before {
   content: "●";
   color: #f14c4c;
 }

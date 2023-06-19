@@ -50,41 +50,43 @@
             border-radius: 0;
             font-size: 1rem !important;
             box-sizing: border-box;
-            overflow: auto;
+            overflow: hidden auto;
 
             &::selection,
             *::selection {
                 background: var(--tc-selection);
             }
 
-            .ps1 {
-                user-select: none;
-            }
-
             details {
                 display: inline-block;
+                width: 100%;
+                margin-right: 16px;
 
                 summary {
                     display: inline-block;
-                    text-indent: -1ch;
-                }
+                    width: 100%;
+                    margin-right: 16px;
 
-                summary::before {
-                    content: "○";
+                    .ps1 {
+                        position: relative;
+                    }
+
+                    .ps1::before {
+                        content: "○";
+                        position: absolute;
+                        bottom: 0;
+                        left: -1.2ch;
+                    }
                 }
             }
 
             details[open] {
-                .ps1 {
-                    user-select: auto;
-                }
-
-                summary::before {
+                summary .ps1::before {
                     content: "●";
                     color: #3b8eea;
                 }
 
-                summary.error::before {
+                summary.error .ps1::before {
                     content: "●";
                     color: #f14c4c;
                 }
