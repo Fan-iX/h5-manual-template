@@ -26,6 +26,13 @@
 .dark .browser .body a {
   color: #738ba5;
 }
+.light {
+  color: black;
+  background: white;
+}
 .light .slide .body {
   background: #999999;
+}
+body {
+  background: white;
 }
