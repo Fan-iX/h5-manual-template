@@ -6,6 +6,12 @@
   display: flex;
   flex-direction: column;
 }
+.browser[hidden],
+.slide[hidden],
+.editor[hidden],
+.terminal[hidden] {
+  display: none;
+}
 .browser .titlebar,
 .slide .titlebar,
 .editor .titlebar,

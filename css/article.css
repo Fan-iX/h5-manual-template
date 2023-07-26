@@ -1,51 +1,49 @@
-article .task-box,
-body.article .task-box {
+article {
+  max-width: 800px;
+  padding: 0 3em;
+  margin: 0 auto;
+}
+article .task-box {
   position: sticky;
   top: 0;
   width: 100%;
   background-color: inherit;
   z-index: 1;
 }
-article .task-box summary,
-body.article .task-box summary {
+article .task-box summary {
   display: block;
   transition: margin 150ms ease-out;
   user-select: none;
 }
-article .task-box summary::before,
-body.article .task-box summary::before {
+article .task-box summary::before {
   margin: 0 1ch;
   display: inline-block;
   transition: 0.2s;
   content: '▶';
 }
-article .task-box #task-list,
-body.article .task-box #task-list {
+article .task-box #task-list {
   margin: 0;
 }
-article .task-box ol,
-body.article .task-box ol {
+article .task-box ol {
   counter-reset: item;
   padding-inline-start: 1em;
 }
-article .task-box li,
-body.article .task-box li {
+article .task-box li {
   display: block;
 }
-article .task-box li:before,
-body.article .task-box li:before {
+article .task-box li:before {
   content: counters(item, ".") ".";
   counter-increment: item;
 }
-article .task-box[open],
-body.article .task-box[open] {
+article .task-box[open] {
   padding-bottom: 0.5em;
 }
-article .task-box[open] summary,
-body.article .task-box[open] summary {
+article .task-box[open] summary {
   margin-bottom: 10px;
 }
-article .task-box[open] summary::before,
-body.article .task-box[open] summary::before {
+article .task-box[open] summary::before {
   transform: rotate(90deg);
+}
+article .slide .body {
+  resize: vertical;
 }

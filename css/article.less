@@ -1,5 +1,8 @@
-article,
-body.article {
+article {
+    max-width: 800px;
+    padding: 0 3em;
+    margin: 0 auto;
+
     .task-box {
 
         position: sticky;
@@ -49,6 +52,12 @@ body.article {
             &::before {
                 transform: rotate(90deg);
             }
+        }
+    }
+
+    .slide {
+        .body {
+            resize: vertical;
         }
     }
 }
