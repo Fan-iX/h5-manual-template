@@ -2,6 +2,9 @@
   color: white;
   background: #1a1b1b;
 }
+.dark a {
+  color: #738ba5;
+}
 .dark .task-box {
   background: #1a1b1b;
 }
@@ -19,20 +22,6 @@
 }
 .dark .slide .body .slide-container {
   background: #1a1b1b;
-}
-.dark .slide .body a {
-  color: #738ba5;
-}
-.dark .browser .body a {
-  color: #738ba5;
-}
-.dark article {
-  color: white;
-  background: #1a1b1b;
-}
-.light {
-  color: black;
-  background: white;
 }
 .light .slide .body {
   background: #999999;
