@@ -6,18 +6,13 @@
   display: flex;
   flex-direction: column;
 }
-.browser[hidden],
-.slide[hidden],
-.editor[hidden],
-.terminal[hidden] {
-  display: none;
-}
 .browser .titlebar,
 .slide .titlebar,
 .editor .titlebar,
 .terminal .titlebar {
   display: none;
   flex: 0 0 auto;
+  overflow: hidden;
 }
 .browser .toolbar,
 .slide .toolbar,
@@ -28,9 +23,27 @@
 }
 .browser .body,
 .slide .body,
-.editor .editor-body,
-.terminal .terminal-body {
+.editor .body,
+.terminal .body {
   height: 30em;
+}
+.win .browser.closed .body,
+.mac .browser.closed .body,
+.win .slide.closed .body,
+.mac .slide.closed .body,
+.win .editor.closed .body,
+.mac .editor.closed .body,
+.win .terminal.closed .body,
+.mac .terminal.closed .body,
+.win .browser.closed .toolbar,
+.mac .browser.closed .toolbar,
+.win .slide.closed .toolbar,
+.mac .slide.closed .toolbar,
+.win .editor.closed .toolbar,
+.mac .editor.closed .toolbar,
+.win .terminal.closed .toolbar,
+.mac .terminal.closed .toolbar {
+  display: none;
 }
 .win .browser .titlebar,
 .win .slide .titlebar,

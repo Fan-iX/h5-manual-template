@@ -1,11 +1,11 @@
 .editor .titlebar {
   display: none;
 }
-.editor .editor-body {
+.editor .body {
   display: flex;
   width: 100%;
 }
-.editor .editor-body .editor-text {
+.editor .body .editor-text {
   background: #fff;
   padding: 16px;
   white-space: pre-wrap;
@@ -171,6 +171,6 @@
   color: black;
   background: #f9f9f9;
 }
-.mac .editor .editor-body .editor-text {
+.mac .editor .body .editor-text {
   padding: 8px;
 }

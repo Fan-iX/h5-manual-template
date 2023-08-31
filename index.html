@@ -41,7 +41,7 @@
         <li><input type="checkbox" id="task-3">任务3</li>
       </ol>
     </details>
-    <div class="slide">
+    <div class="slide closable">
       <div class="titlebar">
         <div class="titlebar-title">
           <div class="titlebar-icon"></div>
@@ -64,7 +64,7 @@
       <div class="body" id="manual-container">
         <div class="slide-container">
           <section class="slide-page">
-            <h1>第一章<br>使用<a href="#task-box"><code>ssh</code></a>登录服务器</h1>
+            <h1>第一章<br><input type="text" placeholder="在这里输入标题"></h1>
           </section>
         </div>
         <div class="slide-container">
@@ -73,17 +73,17 @@
             <p>You could apply the <code>padding-bottom</code> to its <code>::before</code>
               pseudoelement</p>
             <pre class="code">
-    .some-class {
-    width: 100%;
-    max-width: 520px;
-    border: 1px #9bc solid;
-    }
-    .some-class::before {
-    padding-bottom: 100%;
-    content: "";
-    display: inline-block;
-    vertical-align: top;
-    }</pre>
+.some-class {
+width: 100%;
+max-width: 520px;
+border: 1px #9bc solid;
+}
+.some-class::before {
+padding-bottom: 100%;
+content: "";
+display: inline-block;
+vertical-align: top;
+}</pre>
           </section>
         </div>
         <div class="slide-container">
@@ -117,7 +117,7 @@
         </div>
       </div>
     </div>
-    <div class="browser">
+    <div class="browser closable">
       <div class="titlebar">
         <div class="titlebar-title">
           <div class="titlebar-icon"></div>
@@ -150,7 +150,7 @@
           <li><a href="javascript:;">software/</a></li>
       </div>
     </div>
-    <div class="terminal">
+    <div class="terminal closable">
       <div class="titlebar">
         <div class="titlebar-title">
           <div class="titlebar-icon"></div>
@@ -161,18 +161,18 @@
         <div class="button btn-2"></div>
         <div class="button btn-3"></div>
       </div>
-      <div class="terminal-body">
+      <div class="body">
         <div class="panel-v">
           <pre class="terminal-code" oncontextmenu="event.preventDefault()">
-    <details data-manual="ls"><summary><span class="bash ps1">[<span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>]$ </span>whoami</summary>
-    coli</details>
-    <details data-manual="ls"><summary><span class="bash ps1">[<span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>]$ </span>export PS1='\[\e[0;92m\]\u@\h\[\e[0m\]: \[\e[0;34m\]\w\[\e[0;0m\]\n$ '</summary>
-    </details>
-    <details data-manual="ls"><summary><span class="bash ps1"><span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>
-    $ </span>whoami</summary>
-    coli</details>
-    <span class="bash ps1"><span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>
-    $ </span><span contentEditable="true" spellcheck="false"></span>
+<details data-manual="ls"><summary><span class="bash ps1">[<span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>]$ </span>whoami</summary>
+coli</details>
+<details data-manual="ls"><summary><span class="bash ps1">[<span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>]$ </span>export PS1='\[\e[0;92m\]\u@\h\[\e[0m\]: \[\e[0;34m\]\w\[\e[0;0m\]\n$ '</summary>
+</details>
+<details data-manual="ls"><summary><span class="bash ps1"><span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>
+$ </span>whoami</summary>
+coli</details>
+<span class="bash ps1"><span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>
+$ </span><span contentEditable="true" spellcheck="false"></span>
     </pre>
           <div class="panel-h">
             <pre class="terminal-code" oncontextmenu="event.preventDefault()">
@@ -187,7 +187,7 @@
         </div>
       </div>
     </div>
-    <div class="editor">
+    <div class="editor closable">
       <div class="titlebar">
         <div class="titlebar-title">
           <div class="titlebar-icon"></div>
@@ -203,7 +203,7 @@
         <div class="menu menu-2"></div>
         <div class="menu menu-3"></div>
       </div>
-      <div class="editor-body">
+      <div class="body">
         <textarea class="editor-text" contentEditable="true" spellcheck="false">
     <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" >
       <circle cx="210" cy="210" r="192.5" fill="#fcb548" />
@@ -224,5 +224,6 @@
   </article>
 </body>
 <script src="js/terminal.js"></script>
+<script src="js/window.js"></script>
 
 </html>

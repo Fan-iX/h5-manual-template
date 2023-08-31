@@ -6,13 +6,10 @@
     display: flex;
     flex-direction: column;
 
-    &[hidden]{
-        display: none;
-    }
-
     .titlebar {
         display: none;
         flex: 0 0 auto;
+        overflow: hidden;
     }
 
     .toolbar {
@@ -23,9 +20,26 @@
 
 .browser .body,
 .slide .body,
-.editor .editor-body,
-.terminal .terminal-body {
+.editor .body,
+.terminal .body {
     height: 30em;
+}
+
+.win,
+.mac {
+
+    .browser,
+    .slide,
+    .editor,
+    .terminal {
+        &.closed {
+
+            .body,
+            .toolbar {
+                display: none;
+            }
+        }
+    }
 }
 
 .win {

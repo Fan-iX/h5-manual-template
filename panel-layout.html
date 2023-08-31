@@ -17,7 +17,7 @@
 
 <body class="win">
   <div class="panel-h">
-    <div class="terminal">
+    <div class="terminal closable">
       <div class="titlebar">
         <div class="titlebar-title">
           <div class="titlebar-icon"></div>
@@ -28,7 +28,7 @@
         <div class="button btn-2"></div>
         <div class="button btn-3"></div>
       </div>
-      <div class="terminal-body">
+      <div class="body">
         <div class="panel-v">
           <pre class="terminal-code" oncontextmenu="event.preventDefault()">
 <details data-manual="ls"><summary><span class="bash ps1">[<span class="bash ps1-u">coli</span><span class="terminal-code-brightgreen">@</span><span class="bash ps1-h">DESKTOP-J45M1NUM</span>: <span class="bash ps1-w">~</span>]$ </span>whoami</summary>
@@ -56,52 +56,79 @@ Linux</details>
     </div>
 
     <div class="panel-v">
-      <article>
-        <hgroup>
-          <h1>Header 1</h1>
-        </hgroup>
+      <div>
+        <article>
+          <hgroup>
+            <h1>Header 1</h1>
+          </hgroup>
 
-        <p>
-          <select onchange='document.body.classList.remove("win","mac");document.body.classList.add(this.value)'>
-            <option value="win">Windows</option>
-            <option value="mac">MacOS</option>
-          </select>
-          <select onchange='document.body.classList.remove("dark","light");document.body.classList.add(this.value)'>
-            <option value="dark">暗</option>
-            <option value="default">默认</option>
-            <option value="light">亮</option>
-          </select>
-          <input type="text">
-        </p>
-        <details class="task-box" id="task-box" open>
-          <summary>任务目标</summary>
-          <ol id="task-list">
-            <li><input type="checkbox" id="task-1">任务1
-              <ol>
-                <li><input type="checkbox" id="task-1-1">任务1.1</li>
-                <li><input type="checkbox" id="task-1-1">任务1.2</li>
-              </ol>
-            </li>
-            <li><input type="checkbox" id="task-2">任务2</li>
-            <li><input type="checkbox" id="task-3">任务3</li>
-          </ol>
-        </details>
-        <h3>ssh密钥登陆</h3>
-        <p>除了使用密码进行登录身份验证之外，OpenSSH还支持通过密钥完成登录身份验证。</p>
-        <p>
-          一对ssh密钥由私钥和公钥两个文件组成，它们是两段不同的复杂的随机文本。一段数据由公钥加密后可以由其对应的私钥解密还原，而在没有私钥的情况下，仅根据公钥和密文的来推断加密前的数据被认为是不可实现的。因此，密钥可被用于身份验证：用户在服务器端和客户端分别存储公钥和私钥，需要身份验证时，服务器端将一段加密后的文本发送到客户端，客户端将通过私钥将密文解密后发回服务器端，如果服务器端收到的文本与加密前的文本一致，那么用户身份得以验证。
-        </p>
-        <p>利用<code>ssh-keygen</code>可以生成一组全新的ssh密钥</p>
-        <p>
-          其中<code>/home/coli/.ssh/id_rsa</code>指定了生成的密钥文件的储存位置，<code>passphrase</code>是私钥口令，每次使用私钥登录前都需要输入此口令以启用私钥，相当于给私钥再设置一个密码。
-        </p>
-        <p>按照其默认配置（全部留空）生成的私钥文件储存在<code>/home/coli/.ssh/id_rsa</code>，公钥文件储存在<code>/home/coli/.ssh/id_rsa.pub</code>。
-        </p>
-        <p>要通过密钥登录到远程设备，还需要将公钥复制到远程设备的<code>~/.ssh/authorized_keys</code>下，可以通过<code>scp</code>将文件传输到远程设备：</p>
-        <a onclick="document.querySelector('.terminal').hidden^=1" href="javascript:void()">显示terminal</a>
-      </article>
-
-      <div class="slide">
+          <p>
+            <select onchange='document.body.classList.remove("win","mac");document.body.classList.add(this.value)'>
+              <option value="win">Windows</option>
+              <option value="mac">MacOS</option>
+            </select>
+            <select onchange='document.body.classList.remove("dark","light");document.body.classList.add(this.value)'>
+              <option value="dark">暗</option>
+              <option value="default">默认</option>
+              <option value="light">亮</option>
+            </select>
+            <input type="text">
+          </p>
+          <details class="task-box" id="task-box" open>
+            <summary>任务目标</summary>
+            <ol id="task-list">
+              <li><input type="checkbox" id="task-1">任务1
+                <ol>
+                  <li><input type="checkbox" id="task-1-1">任务1.1</li>
+                  <li><input type="checkbox" id="task-1-1">任务1.2</li>
+                </ol>
+              </li>
+              <li><input type="checkbox" id="task-2">任务2</li>
+              <li><input type="checkbox" id="task-3">任务3</li>
+            </ol>
+          </details>
+          <h1 title="The HTML Section Heading element 1">&lt;h1&gt; represent the 1 level of section heading &lt;/h1&gt;
+          </h1>
+          <h2 title="The HTML Section Heading element 2">&lt;h2&gt; represent the 2 level of section heading &lt;/h2&gt;
+          </h2>
+          <h3 title="The HTML Section Heading element 3">&lt;h3&gt; represent the 3 level of section heading &lt;/h3&gt;
+          </h3>
+          <h4 title="The HTML Section Heading element 4">&lt;h4&gt; represent the 4 level of section heading &lt;/h4&gt;
+          </h4>
+          <h5 title="The HTML Section Heading element 5">&lt;h5&gt; represent the 5 level of section heading &lt;/h5&gt;
+          </h5>
+          <h6 title="The HTML Section Heading element 6">&lt;h6&gt; represent the 6 level of section heading &lt;/h6&gt;
+          </h6>
+          <div title="The Content Division element">&lt;div&gt; is the generic container for flow content. &lt;/div&gt;
+          </div>
+          <p title="The Paragraph element">&lt;p&gt; represents a paragraph. &lt;/p&gt;</p>
+          <details title="The Details disclosure element" open>
+            <summary title="The Disclosure Summary element">
+              &lt;summary&gt; specifies a summary, caption, or legend for the disclosure box. &lt;/summary&gt;
+            </summary>
+            &lt;details&gt; creates a disclosure widget in which information is visible only when the widget is toggled
+            into
+            an "open" state. &lt;/details&gt;
+          </details>
+          <blockquote title="The Block Quotation element">
+            &lt;blockquote&gt; indicates that the enclosed text is an extended quotation. &lt;/blockquote&gt;
+          </blockquote>
+          <address title="This Contact Address element">
+            &lt;address&gt; indicates that the enclosed HTML provides contact information for a person or people, or for
+            an
+            organization. &lt;/address&gt;
+          </address>
+          <pre title="The Preformatted Text element">&lt;pre&gt; represents
+    preformatted text
+  which is to be presented
+      EXACTLY
+              as
+  written in the HTML file.
+  &lt;/pre&gt;</pre>
+          <a onclick="document.querySelector('.terminal').hidden^=1" href="javascript:void()">显示terminal</a>
+        </article>
+      </div>
+      <div class="slide closable">
         <div class="titlebar">
           <div class="titlebar-title">
             <div class="titlebar-icon"></div>
@@ -184,5 +211,6 @@ Linux</details>
   </div>
 </body>
 <script src="js/terminal.js"></script>
+<script src="js/window.js"></script>
 
 </html>

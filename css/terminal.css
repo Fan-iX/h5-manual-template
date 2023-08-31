@@ -13,34 +13,34 @@
 .terminal .titlebar {
   display: none;
 }
-.terminal .terminal-body {
+.terminal .body {
   width: 100%;
   overflow-y: scroll;
   box-sizing: border-box;
   display: flex;
   overflow-y: hidden;
 }
-.terminal .terminal-body .panel-h > * {
+.terminal .body .panel-h > * {
   border-color: #4c4a48;
   border-style: none solid;
 }
-.terminal .terminal-body .panel-h > *:first-child {
+.terminal .body .panel-h > *:first-child {
   border-left: none;
 }
-.terminal .terminal-body .panel-h > *:last-child {
+.terminal .body .panel-h > *:last-child {
   border-right: none;
 }
-.terminal .terminal-body .panel-v > * {
+.terminal .body .panel-v > * {
   border-color: #4c4a48;
   border-style: solid none;
 }
-.terminal .terminal-body .panel-v > *:first-child {
+.terminal .body .panel-v > *:first-child {
   border-top: none;
 }
-.terminal .terminal-body .panel-v > *:last-child {
+.terminal .body .panel-v > *:last-child {
   border-bottom: none;
 }
-.terminal .terminal-body .terminal-code {
+.terminal .body .terminal-code {
   padding: 8px 1.5ch;
   margin: 0;
   cursor: default;
@@ -52,34 +52,34 @@
   box-sizing: border-box;
   overflow: hidden auto;
 }
-.terminal .terminal-body .terminal-code::selection,
-.terminal .terminal-body .terminal-code *::selection {
+.terminal .body .terminal-code::selection,
+.terminal .body .terminal-code *::selection {
   background: var(--tc-selection);
 }
-.terminal .terminal-body .terminal-code details {
+.terminal .body .terminal-code details {
   display: inline-block;
   width: 100%;
   margin-right: 16px;
 }
-.terminal .terminal-body .terminal-code details summary {
+.terminal .body .terminal-code details summary {
   display: inline-block;
   width: 100%;
   margin-right: 16px;
 }
-.terminal .terminal-body .terminal-code details summary .ps1 {
+.terminal .body .terminal-code details summary .ps1 {
   position: relative;
 }
-.terminal .terminal-body .terminal-code details summary .ps1::before {
+.terminal .body .terminal-code details summary .ps1::before {
   content: "○";
   position: absolute;
   bottom: 0;
   left: -1.2ch;
 }
-.terminal .terminal-body .terminal-code details[open] summary .ps1::before {
+.terminal .body .terminal-code details[open] summary .ps1::before {
   content: "●";
   color: #3b8eea;
 }
-.terminal .terminal-body .terminal-code details[open] summary.error .ps1::before {
+.terminal .body .terminal-code details[open] summary.error .ps1::before {
   content: "●";
   color: #f14c4c;
 }
@@ -144,7 +144,7 @@
   --tc-foreground: #eeedf0;
   --tc-background: #012456;
 }
-.terminal .terminal-body {
+.terminal {
   background: var(--tc-background, black);
 }
 .terminal .terminal-code {
@@ -207,7 +207,7 @@
 .terminal ::-webkit-scrollbar-thumb:active {
   background: #787878;
 }
-.light .terminal .terminal-body {
+.light .terminal .body {
   color: var(--tc-background, white);
 }
 .light .terminal .terminal-code {

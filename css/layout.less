@@ -26,8 +26,8 @@ body {
 
     .browser .body,
     .slide .body,
-    .editor .editor-body,
-    .terminal .terminal-body {
+    .editor .body,
+    .terminal .body {
         flex: 1;
     }
 }
@@ -38,6 +38,11 @@ body {
     &>* {
         overflow-x: auto;
     }
+
+    &>.closed {
+        width: 3em;
+        flex: 0 1 auto;
+    }
 }
 
 .panel-v {
@@ -45,5 +50,10 @@ body {
 
     &>* {
         overflow-y: auto;
+    }
+
+    &>.closed {
+        height: auto;
+        flex: 0 1 auto;
     }
 }
